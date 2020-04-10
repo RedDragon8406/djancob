@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shalam</title>
+    <link rel="stylesheet" href="{% static "css/boot/bootstrap-rtl.css" %}">
+    <link rel="icon" href="{% static "images/Scob icon.png" %}">
+</head>
+<body>
+    <h1 class="text-primary text-center">
+        تماس با ما
+    </h1>
+    <h4 class="text-info container">
+       سلام ! اگر سوالی دارید فرم پایین را پر کرده و بفرستید تا ما هر چه سریع تر مشکل شما را رفع کنیم
+    </h4>
+    <hr class="hr-main-1">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
+        {% if request.user.is_authenticated%}
+        <form style="background-color: rgb(255, 255, 170);padding: 30px;padding-top: 30px;border: solid 2px gray;" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <br>
+            <button class="btn btn-success btn-block "style="width: 50%;margin-right:25%">بفرست</button>
+        </form>
+        {% endif %}
+        {% if request.user.is_authenticated == False %}
+        <h2 class="text-danger text-center">
+            اول شما باید وارد شوید
+        </h2>
+        <a href="/login" class="btn btn-success" style="width: 50%;margin-right: 20%">وارد شوید</a>
+        {% endif %}
+    </div>
+</body>
+</html>
