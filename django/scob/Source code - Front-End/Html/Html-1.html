@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>آموزش Html & css مقدماتی | اسکوب</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="icon" href="{% static "images/Scob icon.png" %}">
+    <link rel="stylesheet" href="../Css/main-css.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header" class="row col-12">
+            <h1 class="text-center text-primary">آموزش Html & css مقدماتی</h1>
+            <h2 class="text-center"><a href="/" class="btn btn-success">برگشت به خانه</a></h2>
+        </div>
+        <div class="row" style="border: solid 2px lightgray; padding: 10px;">
+            <div id="sidebar" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="pish">
+                    <div class="panel panel-heading text-center" style="font-size:large;font-weight: 500;">اطلاعات مدرس
+                        دوره</div>
+                    <img src="../files/images/amirparsaro.jpg" width="40%" align="center" class="img-circle" style="margin-right: 34.325%;">
+                    <hr>
+                    <p>
+                        امیرپارسا روحانی هستم مدرس این دوره <br>
+                        و امیدوارم خوشتون اومده باشه!
+                    </p>
+                </div>
+
+                <br><br>
+
+                <div class="pish">
+                    <h4 class="pish_info_title">اطلاعات دوره</h4>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-education"> </i> سطح :‌ آسان</li><br>
+                        <li><i class="glyphicon glyphicon-edit"> </i> وضعیت دوره : در حال برگذاری</li><br>
+                        <li><i class="glyphicon glyphicon-bitcoin"> </i> قیمت : رایگان</li><br>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="main" class="col-lg-8 col-md-8 col-sm-6 col-xs-12"
+                style="border: solid 2px lightgray; padding: 10px;">
+                <p style="font-weight: 700;">معرفی دوره:</p>
+                <p>برای ساخت هر برنامه ، باید المان ها و متغیر های مربوط به خود آن برنامه را تعیین کرد</p>
+                <p>لذا برای ساخت برنامه های تحت وب ، باید از همان المان یعنی زبان های  html و css  استفاده نمود </p>
+                <p>پس اینجا هستیم تا این زبان را یاد بگیریم . امیدوارم خوشتون بیاد!</p>
+                <hr>
+                <p style="font-weight: 700;">پیش نیاز ها:</p>
+                <p>پیش نیاز ندارد!</p>
+                <br><br>
+                <hr>
+                <h3 class="text-center" style="font-weight: 700;">پیش نمایش</h3>
+                <video width="100%" height="100%" controls>
+                    <source
+                        src="https://as9.cdn.asset.aparat.com/aparat-video/d68c513494e5b3912b32e386f828e2ff21129557-480p.mp4">
+                </video>
+                <br><br><br><br><br>
+                <hr>
+                <h2>قسمت ها:</h2>
+                {% if request.user.is_authenticated %}
+                <ul style="background-color: rgb(230, 230, 230);padding: 20px;">
+                    <li><a href="https://as9.cdn.asset.aparat.com/aparat-video/d68c513494e5b3912b32e386f828e2ff21129557-480p.mp4"
+                            class="btn btn-primary btn-block" style="zoom: 1.5;width: 50%;">قسمت پیش نمایش</a></li><br>
+                    <li><a href="" class="btn btn-warning btn-block" style="zoom: 1.5;width: 50%;">قسمت اول</a></li><br>
+                    <li><a href="#"
+                            class="btn btn-primary btn-block" style="zoom: 1.5;width: 50%;">قسمت دوم</a></li><br>
+                    <li><a href="#"
+                            class="btn btn-primary btn-block" style="zoom: 1.5;width: 50%;">قسمت سوم</a></li><br>
+                </ul>
+                {% endif %}
+            {% if request.user.is_authenticated == False %}
+                <h4 class="text-center text-danger">اول باید وارد شوید</h4>
+                <a href="/login" class="btn btn-success">ورود</a>
+            {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
