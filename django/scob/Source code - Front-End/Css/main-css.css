@@ -97,3 +97,17 @@ nav{
     color: rgb(0,0,0);
     text-decoration: none;
 }
+.div-alignment {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border: darkgrey dashed 5px;
+    background-color: lightgray;
+}
+.empty-cart {
+    margin: 20%;
+    text-align: center;
+    font-size: 200%;
+    font-style: italic;
+}
