@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3fb9db87-7947-4d2f-bacc-3b35f100e41e" name="Default Changelist" comment="" />
+    <list default="true" id="3fb9db87-7947-4d2f-bacc-3b35f100e41e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,17 +36,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1aAkIc0VtRDg6Xl7YwW6OSmZKRB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -74,7 +81,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="scob.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\amirparsa\AppData\Local\Programs\Python\Python37\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -107,32 +114,46 @@
       <workItem from="1586326582150" duration="6427000" />
       <workItem from="1586416043826" duration="1075000" />
       <workItem from="1586453235519" duration="701000" />
+      <workItem from="1586593330285" duration="155000" />
+      <workItem from="1586602348380" duration="80000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="415" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586261422281">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="415" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1586261422281" />
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1586453936646">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state x="392" y="0" key="#scob" timestamp="1586593443228">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="392" y="0" key="#scob/0.0.1366.728@0.0.1366.728" timestamp="1586593443228" />
+    <state x="550" y="118" key="EnvironmentVariablesDialog" timestamp="1586593434851">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="550" y="118" key="EnvironmentVariablesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586593434851" />
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom" timestamp="1586593485264">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586593485264" />
     <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1586453936646" />
-    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1586453936646">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center" timestamp="1586593485263">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586593485263" />
     <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1586453936646" />
-    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1586453936646">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left" timestamp="1586593485263">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586593485263" />
     <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1586453936646" />
-    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1586453936646">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right" timestamp="1586593485264">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586593485264" />
     <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1586453936646" />
     <state x="186" y="79" key="SettingsEditor" timestamp="1586234172528">
       <screen x="0" y="0" width="1368" height="872" />
