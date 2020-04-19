@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import main_page,login_page,register_page,logout_page,contact_page,about_page,python_page
+from .views import main_page, login_page, register_page, logout_page, contact_page, about_page
+from .views import search_page,cart_page
 
 from django.conf import settings
 from django.conf.urls.static import static
+from courses.views import CoursesDetailView,courses_list_view
+from products.views import ProductDetailView,product_list_view
+from masters.views import MasterDetailView,master_list_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,10 +32,17 @@ urlpatterns = [
     path('logout', logout_page),
     path('contact-us', contact_page),
     path('about-us', about_page),
-    path('courses/python', python_page),
+    path('search', search_page),
+    path('courses', courses_list_view),
+    path('products', product_list_view),
+    path('masters', master_list_view),
+    path('cart', cart_page),
+    path('courses/<pk>', CoursesDetailView.as_view()),
+    path('products/<pk>', ProductDetailView.as_view()),
+    path('masters/<pk>', MasterDetailView.as_view()),
 ]
 
-if settings.DEBUG:   # add static files
+if settings.DEBUG:  # add static files
     urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    #add media files
+    # add media files
     urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

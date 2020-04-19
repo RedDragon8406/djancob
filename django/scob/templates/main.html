@@ -1,200 +1,322 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>scob | learn fast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static "css/boot/bootstrap-rtl.css" %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static "css/boot/bootstrap-rtl.css" %}">
+    <link rel="stylesheet" href="{% static "css/main-css.css" %}">
+    <link rel="icon" href="{% static "images/Scob icon.png" %}">
+    <link rel="glyphicon" href="{% static "fonts/glyphicons-halflings-regular.svg" %}">
     <script src="{% static "js/Scripts/jquery-1.10.2.min.js" %}"></script>
     <script src="{% static "js/Scripts/bootstrap-rtl.js" %}"></script>
-    <link rel="icon" href="{% static "images/Scob icon.png" %}">
-
 </head>
+
 <body>
-    <div class="container">
-        <div id="header" class="row">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+<div class="container">
+    <div id="header" class="col-lg-12">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <!--all has links!-->
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="" style="margin-left: 5px ;">اسکوب</a>
-                    </div>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="/login">ورود <span class="sr-only">(current)</span></a></li>
-                            <li><a href="/contact-us">تماس با ما</a></li>
-                            <li><a href="/about-us">درباره ی ما</a></li>
+                    <!--link-->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">خانه <span class="sr-only">(current)</span></a></li>
+                        <li><a href="/about-us">درباره ما</a></li>
+                        <li><a href="/contact-us">تماس با ما</a></li>
+                        <li><a href="/login">ورود</a></li>
+                        {% if request.user.is_superuser %}
                             <li><a href="/admin/">پنل ادمین</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">محصولات<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">دیجیتال</a></li>
-                                    <li><a href="#">کشاورزی</a></li>
-                                    <li><a href="#">خانه</a></li>
-                                    <li role="separator" class="divider"></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <form method="POST" class="navbar-form navbar-left">
-                            {% csrf_token %}
-                            <div class="form-group">
-                                <input type="text" class="form-control" style="width: 300px;" placeholder="Search">
-                            </div>
-                            <button type="submit" class="btn btn-success"><i
-                                    class="glyphicon glyphicon-search"></i></button>
-                        </form>
-                        <ul class="nav navbar-nav navbar-right">
+                        {% endif %}
+                        {% if request.user.is_authenticated %}
+                            <li><a href="/cart">سبد خرید</a></li>
+                        {% endif %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">آموزش ها <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/courses/1">پایتون</a></li>
+                                <li><a href="/courses/2">وب</a></li>
+                                <li><a href="#">Node.js</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">محصولات <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/products/home">لوازم خانه</a></li>
+                                <li><a href="/products/digital">الکترونیکی</a></li>
+                                <li><a href="/products/education">آموزشی</a></li>
+                                <li><a href="/products/book">کتاب</a></li>
+                                <li><a href="/products/movie">فیلم و انیمیشن</a></li>
+                                <li><a href="/products/pen">لوازم التحریر</a></li>
+                                <li><a href="/products">همه ی محصولات </a></li>
 
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                    aria-haspopup="true" aria-expanded="false">آموزشات<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/courses/python">پایتون</a></li>
-                                    <li><a href="#">طراحی سایت</a></li>
-                                    <li><a href="#">جنگو</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" method="GET" action="/search">
+                        <div class="form-group">
+                            <input type="text" name="searching" class="form-control search-bar" style="width: 275px"
+                                   placeholder="جستجو کنید...">
+                            <button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-search "></i>
+                            </button>
+                        </div>
 
-        </div>
-        <br><br><br><br><br>
-        <div class="row">
-            <div id="sidebar" class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
-                <table class="table table-bordered table-hover table-striped">
-                    <tr>
-                        <td>#</td>
-                        <td>نام کاربری</td>
-                        <td>وضعیت کاربر</td>
+                    </form>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="row" style="margin-top: 60px;">
+        <div id="sidebar" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">آموزش های مختلف : </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="/search?searching=frontend" class="badge">{{ front_topic }}</a> آموزش های وب -
+                            فرانت اند
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/search?searching=backend" class="badge">{{ back_topic }}</a> آموزش های وب - بک اند
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/search?searching=python" class="badge">{{ python_topic }}</a> آموزش های پایتون
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/search?searching=graphics" class="badge">{{ graphics_topic }}</a> آموزش نرم افزار
+                            های گرافیکی
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">محصولات مختلف : </h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="/search?searching=home" class="badge">{{ home_topic }}</a>خانه
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/search?searching=farming" class="badge">{{ farming_topic }}</a>کشاورزی
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/search?searching=digital" class="badge">{{ digital_topic }}</a>لوازم دیجیتال
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/search?searching=book" class="badge">{{ book_topic }}</a>کتاب
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br><br>
+            {% if request.user.is_superuser %}
+                <table class="table table-bordered table-hover">
+                    <tr class="active">
+                        <th>#</th>
+                        <th>نام</th>
+                        <th>فامیلی</th>
+                        <th>ادمین</th>
                     </tr>
-                    <tr>
-                        <td>۱</td>
-                        <td>سپهر کاردل</td>
-                        <td>آنلاین</td>
-                    </tr>
-                    <tr>
-                        <td>۲</td>
-                        <td>سروش کاردل</td>
-                        <td>آفلاین</td>
-                    </tr>
-                    <tr>
-                        <td>۳</td>
-                        <td>پارسا روحانی</td>
-                        <td>smoking :|</td>
-                    </tr>
+                    {% for user in users %}
+
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>
+                                {% if user.first_name == '' %}
+                                    اسم ندارد
+                                {% else %}
+                                    {{ user.first_name }}
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if user.last_name == '' %}
+                                    فامیلی ندارد
+                                {% else %}
+                                    {{ user.last_name }}
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if user.is_superuser == True %}
+                                    کاربر ادمین
+                                {% else %}
+                                    کاربر عادی
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </table>
-            </div>
-            <div id="main" class="col-lg-8 col-md-9 col-sm-6 col-xs-12">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="{% static "images/natural.png" %}" width="100%" height="200px" alt="...">
-                            <div class="carousel-caption">
-                                its just natural
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="{% static "images/node.png" %}" width="100%" height="200px" alt="...">
-                            <div class="carousel-caption">
-                                node js haha
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="{% static "images/python.png" %}" width="100%" height="200px" alt="...">
-                            <div class="carousel-caption">
-                                python is languege or snake?
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
+            {% endif %}
         </div>
-        <div id="footer" class="row">
-            <br><br><br><br><br><br><br><br><br>
-            <footer style="background-color: rgb(96, 96, 255);color:white" class="page-footer font-small blue pt-4 navbar-fixed-bottom">
-                <div class="container-fluid text-center text-md-left">
-                    <div class="row">
-                        <div class="col-md-6 mt-md-0 mt-3">
-                            <h5 class="text-uppercase">Footer Content</h5>
-                            <p>Here you can use rows and columns to organize your footer content.</p>
-                        </div>
-                        <hr class="clearfix w-100 d-md-none pb-3">
-                        <div class="col-md-3 mb-md-0 mb-3">
-                            <h5 class="text-uppercase">Links</h5>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a style="color:white" href="/login">login</a>
-                                </li>
-                                <li>
-                                    <a style="color:white" href="/register">register</a>
-                                </li>
-                                <li>
-                                    <a style="color:white" href="/about-us">about-us</a>
-                                </li>
-                                <li>
-                                    <a style="color:white" href="/contact-us">contact-us</a>
-                                </li>
-                            </ul>
+        <div id="section" class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
 
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="{% static "images/Untitled-1.png" %}" width="100%" alt="">
+                        <div class="carousel-caption">
                         </div>
-                        <div class="col-md-3 mb-md-0 mb-3">
-                            <h5 class="text-uppercase">Links</h5>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a style="color:white" href="/courses/python">python</a>
-                                </li>
-                                <li>
-                                    <a style="color:white" href="#notyet">goods</a>
-                                </li>
-                                <li>
-                                    <a style="color:white" href="/">home</a>
-                                </li>
-                                <li>
-                                    <a style="color:white" href="#notyet">html & css</a>
-                                </li>
-                            </ul>
+                    </div>
+                    <div class="item">
+                        <img src="{% static "images/Untitled-2.png" %}" width="100%" alt="">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="{% static "images/untitled-3.png" %}" width="100%" alt="">
+                        <div class="carousel-caption">
                         </div>
                     </div>
                 </div>
-                <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                    <a style="color:white;font-weight: 700;" href="http://scob.com"> scob.com</a>
-                </div>
-            </footer>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i>
+                    <i class="sr-only">Previous</i>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
+                    <i class="sr-only">Next</i>
+                </a>
+            </div>
+            <br>
+            <hr class="line-under-slide">
+            <h3>آخرین آموزش ها-----------------------------------------------------------------------<a href="/courses"
+                                                                                                        class="btn btn-info"
+                                                                                                        style="font-weight: 700">مشاهده
+                ی همه ی دوره ها</a></h3>
+
+            <div class="row">
+                {% for item in last_courses %}
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="{{ item.image.url }}" alt="...">
+                            <div class="caption">
+                                <hr>
+                                <h3>{{ item.title }}</h3>
+                                <hr>
+                                {% if item.price == 0 %}
+                                    <p><label class="btn btn-success">
+                                        {% elif item.price < 50000 %}
+                                    <p><label class="btn btn-primary">
+                                        {% elif item.price < 100000 %}
+                                    <p><label class="btn btn-warning">
+                                        {% else %}
+                                    <p><label class="btn btn-danger">
+                                {% endif %}
+                                {% if item.price == 0 %}
+                                    رایگان
+                                {% else %}
+                                    {{ item.price }} تومان
+                                {% endif %}
+                                </label> <a
+                                    href="/courses/{{ item.id }}"
+                                    class="btn btn-default"
+                                    role="button">مشاهده ی دوره</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+
+            <hr class="line-under-slide">
+            <h3>آخرین محصولات---------------------------------------------------------------------<a href="/products"
+                                                                                                     class="btn btn-info"
+                                                                                                     style="font-weight: 700">مشاهده
+                ی همه ی محصولات</a></h3>
+            <br>
+
+            <div class="row">
+                {% for item in last_products %}
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="{{ item.image.url }}" alt="...">
+                            <div class="caption">
+                                <hr>
+                                <h3>{{ item.title }}</h3>
+                                <hr>
+                                {% if item.price < 100000 %}
+                                    <p><label class="btn btn-success">
+                                        {% elif item.price < 500000 %}
+                                    <p><label class="btn btn-primary">
+                                        {% elif item.price < 1000000 %}
+                                    <p><label class="btn btn-warning">
+                                        {% else %}
+                                    <p><label class="btn btn-danger">
+                                {% endif %}
+                                {% if item.price == 0 %}
+                                    رایگان
+                                {% else %}
+                                    {{ item.price }} تومان
+                                {% endif %}
+                                </label> <a
+                                    href="/products/{{ item.id }}"
+                                    class="btn btn-default"
+                                    role="button">مشاهده ی دوره</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
         </div>
     </div>
+    <div id="footer" class="col-lg-12 Footer">
+        <br>
+        <div align="right">
+            <span align="right" class="Footer-H">پیوند ها</span>
+            <br>
+            <a href="/"><span align="right" class="Footer-link">خانه</span></a>
+            <a href="/login"><span class="Footer-link">ورود</span></a>
+            <br>
+            <a href="/contact_us"><span class="Footer-link">تماس با ما</span></a>
+            <a href="/register"><span class="Footer-link-1">ثبت نام</span></a>
 
-
+            <br>
+            <a href="/about-us"><span class="Footer-link">درباره ما</span></a>
+            <br>
+        </div>
+        <br>
+    </div>
+</div>
 </body>
 
 </html>
