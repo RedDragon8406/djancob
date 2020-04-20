@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static "css/boot/bootstrap-rtl.css" %}">
+    <link rel="stylesheet" href="{% static "css/main-css.css" %}">
+    <link rel="icon" href="{% static "images/Scob icon.png" %}">
+    <link rel="glyphicon" href="{% static "fonts/glyphicons-halflings-regular.svg" %}">
+    <script src="{% static "js/Scripts/jquery-1.10.2.min.js" %}"></script>
+    <script src="{% static "js/Scripts/bootstrap-rtl.js" %}"></script>
+</head>
+<body>
+
+<div class="container">
+    <div id="header" class="col-lg-12">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <!--all has links!-->
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!--link-->
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">خانه <span class="sr-only">(current)</span></a></li>
+                        <li><a href="/about-us">درباره ما</a></li>
+                        <li><a href="/contact-us">تماس با ما</a></li>
+                        <li><a href="/login">ورود</a></li>
+                        {% if request.user.is_superuser %}
+                            <li><a href="/admin/">پنل ادمین</a></li>
+                        {% endif %}
+                        {% if request.user.is_authenticated %}
+                            <li><a href="/cart">سبد خرید</a></li>
+                        {% endif %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">آموزش ها <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/courses/1">پایتون</a></li>
+                                <li><a href="/courses/2">وب</a></li>
+                                <li><a href="#">Node.js</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">محصولات <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/products/home">لوازم خانه</a></li>
+                                <li><a href="/products/digital">الکترونیکی</a></li>
+                                <li><a href="/products/education">آموزشی</a></li>
+                                <li><a href="/products/book">کتاب</a></li>
+                                <li><a href="/products/movie">فیلم و انیمیشن</a></li>
+                                <li><a href="/products/pen">لوازم التحریر</a></li>
+                                <li><a href="/products">همه ی محصولات </a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" method="GET" action="/search">
+                        <div class="form-group">
+                            <input type="text" name="searching" class="form-control search-bar" style="width: 275px"
+                                   placeholder="جستجو کنید...">
+                            <button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-search "></i>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <br><br><br>
+    <h1 class="text-center">همه اساتید</h1>
+    <br>
+    <div class="row">
+        {% for master in object_list %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img class="img-circle" src="{{ master.image.url }}" alt="{{ master.title }}">
+                    <div class="caption">
+                        <hr>
+                        <h3>{{ master.title }}</h3>
+                        <hr>
+                        <p><a href="/masters/{{ master.id }}" class="btn btn-default"
+                           role="button">مشاهده ی مدرس</a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <br><br><br><br><br><br>
+    <div id="footer" class="col-lg-12 Footer">
+        <br>
+        <div align="right">
+            <span align="right" class="Footer-H">پیوند ها</span>
+            <br>
+            <a href="/"><span align="right" class="Footer-link">خانه</span></a>
+            <a href="/login"><span class="Footer-link">ورود</span></a>
+            <br>
+            <a href="/contact_us"><span class="Footer-link">تماس با ما</span></a>
+            <a href="/register"><span class="Footer-link-1">ثبت نام</span></a>
+
+            <br>
+            <a href="/about-us"><span class="Footer-link">درباره ما</span></a>
+            <br>
+        </div>
+        <br>
+    </div>
+</div>
+
+</body>
+</html>

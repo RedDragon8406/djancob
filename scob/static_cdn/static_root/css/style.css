@@ -1,0 +1,16 @@
+.pish{
+    border: 2px solid #b1b1b1;
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+.pish_info_title{
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    border-bottom: solid 2px rgb(65, 65, 231);
+}
+p{
+    zoom: 1.5;
+}
