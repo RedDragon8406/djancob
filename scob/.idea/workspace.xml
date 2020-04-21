@@ -34,6 +34,20 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="courses_course: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="masters_master: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -46,9 +60,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -62,8 +76,9 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowR Tools.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/exchange" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/fonts/fonts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -71,25 +86,25 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="ReadonlyStatusHandler">
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\django\scob\assets\fonts\fonts" />
+      <recent name="D:\django\scob\products" />
+      <recent name="D:\django\scob\venv\Scripts" />
+      <recent name="D:\django\scob\templates" />
+      <recent name="D:\django\scob\assets\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\django\scob\masters\templates\masters" />
       <recent name="D:\django\scob\products\templates" />
       <recent name="D:\django\scob\courses\templates\courses" />
       <recent name="D:\django\scob\assets\images\masters" />
       <recent name="D:\django\scob\templates\auth" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\django\scob\products" />
-      <recent name="D:\django\scob\venv\Scripts" />
-      <recent name="D:\django\scob\templates" />
-      <recent name="D:\django\scob\assets\css" />
-      <recent name="D:\django\scob\assets\css\boot" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.scob">
@@ -181,6 +196,7 @@
       <workItem from="1587320851773" duration="689000" />
       <workItem from="1587370776777" duration="598000" />
       <workItem from="1587389788308" duration="5130000" />
+      <workItem from="1587443981918" duration="12133000" />
     </task>
     <servers />
   </component>
@@ -204,22 +220,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1587267937137" />
-    <state width="1326" height="175" key="GridCell.Tab.0.bottom" timestamp="1587394934988">
+    <state width="1326" height="175" key="GridCell.Tab.0.bottom" timestamp="1587470740388">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="175" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1587394934988" />
-    <state width="1326" height="175" key="GridCell.Tab.0.center" timestamp="1587394934988">
+    <state width="1326" height="175" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1587470740388" />
+    <state width="1326" height="175" key="GridCell.Tab.0.center" timestamp="1587470740388">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="175" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1587394934988" />
-    <state width="1326" height="175" key="GridCell.Tab.0.left" timestamp="1587394934988">
+    <state width="1326" height="175" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1587470740388" />
+    <state width="1326" height="175" key="GridCell.Tab.0.left" timestamp="1587470740387">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="175" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1587394934988" />
-    <state width="1326" height="175" key="GridCell.Tab.0.right" timestamp="1587394934988">
+    <state width="1326" height="175" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1587470740387" />
+    <state width="1326" height="175" key="GridCell.Tab.0.right" timestamp="1587470740388">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="175" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1587394934988" />
+    <state width="1326" height="175" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1587470740388" />
     <state width="1326" height="281" key="GridCell.Tab.1.bottom" timestamp="1586802207244">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -240,10 +256,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1368.872@0.0.1368.872" timestamp="1586756054803" />
-    <state x="193" y="159" key="SettingsEditor" timestamp="1586932801352">
+    <state x="193" y="159" key="SettingsEditor" timestamp="1587446438130">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="193" y="159" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1586932801352" />
+    <state x="193" y="159" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1587446438130" />
     <state x="520" y="309" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1586795011845">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

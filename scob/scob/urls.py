@@ -22,7 +22,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from courses.views import courses_list_view,course_detail_view
 from products.views import product_list_view,product_detail_view
-from masters.views import MasterDetailView,master_list_view
+from masters.views import master_list_view,master_detail_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,7 +39,7 @@ urlpatterns = [
     path('cart', cart_page),
     path('products/<productId>', product_detail_view),
     path('courses/<courseId>', course_detail_view),
-    path('masters/<pk>', MasterDetailView.as_view()),
+    path('masters/<masterId>', master_detail_view),
 ]
 
 if settings.DEBUG:  # add static files

@@ -16,6 +16,14 @@ def upload_image_path(instance, filename):
     final_name = f"{instance.id}-{instance.title}{ext}"
     return f"courses/{final_name}"
 
+
+class CourseManager(models.Manager):
+    def get_by_id(self,courseId):
+        qs = self.get_queryset().filter(id=courseId)
+        if qs.count() == 1:
+            return qs.first()
+        return None
+
 class Course(models.Model):
     title = models.CharField(max_length=30)
     description = models.TextField()
@@ -31,3 +39,5 @@ class Course(models.Model):
 
     def __str__(self):
         return self.title
+
+    objects = CourseManager()
