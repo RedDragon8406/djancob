@@ -115,7 +115,7 @@
                             {% else %}
                                 {{ product.price }} تومان
                             {% endif %}
-                        </label> <a href="/products/{{ product.id }}" class="btn btn-default"
+                        </label> <a href="{{ product.get_absolute_url }}" class="btn btn-default"
                                     role="button">مشاهده ی محصول</a></p>
                     </div>
                 </div>

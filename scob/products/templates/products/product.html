@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static "css/boot/bootstrap-rtl.css" %}">
     <link rel="stylesheet" href="{% static "css/main-css.css" %}">
+    <link rel="stylesheet" href="{% static "css/product.css" %}">
     <link rel="icon" href="{% static "images/Scob icon.png" %}">
     <link rel="glyphicon" href="{% static "fonts/glyphicons-halflings-regular.svg" %}">
     <script src="{% static "js/Scripts/jquery-1.10.2.min.js" %}"></script>
@@ -92,44 +93,37 @@
     </div>
     <br><br><br><br><br><br><br><br><br><br>
     <div class="row">
-        {% if request.user.is_authenticated %}
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="{{ object.image.url }}" alt="...">
-                    <div class="caption">
-                        <h3>{{ object.title }}</h3>
-                        <p>{{ object.description }}</p>
-                        {% if object.price < 100000 %}
-                            <p><a href="#" class="btn btn-success">
-                        {% elif object.price < 500000 %}
-                            <p><a href="#" class="btn btn-primary">
-                        {% elif object.price < 1000000 %}
-                            <p><a href="#" class="btn btn-warning">
-                        {% else %}
-                            <p><a href="#" class="btn btn-danger">
-                        {% endif %}
-                            {% if object.price == 0 %}
-                                رایگان
-                            {% else %}
-                                {{ object.price }} تومان
-                            {% endif %}
-                            <a href="/products"
-                               class="btn btn-default"
-                               role="button">برگشت به
-                                محصولات</a></a></p>
-                    </div>
-                </div>
-                {% if request.user.is_superuser %}
-                    <a href="/admin/products/product/{{ object.id }}/change/" class="btn btn-success">ویرایش</a>
 
-                {% endif %}
+        <div class="product-head">
+            <div class="style">
+                <div class="information">
+                    <div class="name">
+                        <img width="100%" src="{{ object.image.url }}" alt="">
+                        <h2 class="master_title">{{ object.title }}</h2>
+                    </div>
+                    <div class="head_des">
+                        <p>{{ object.description }}</p>
+                    </div>
+                    <div class="append">
+                        <h2 class="text text-center seller-name">فروشنده : {{ object.seller }}</h2>
+                        <hr>
+                        {% if object.price < 100000 %}
+                            <label class="btn btn-success price-label">
+                        {% elif object.price < 500000 %}
+                            <label class="btn btn-primary price-label">
+                        {% elif object.price < 1000000 %}
+                            <label class="btn btn-warning price-label">
+                        {% else %}
+                            <label class="btn btn-danger price-label">
+                        {% endif %}
+                        {{ object.price }} تومان</label>
+                        <hr>
+                        <a href="/cart" class="btn btn-block btn-info btn-append">افزودن به سبد خرید</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
-        {% else %}
-            <div class="row">
-                <h3 class="text-danger">شما وارد نشده اید.همین الان وارد شوید</h3>
-                <a href="/login" style="margin-right: 10%" class="btn btn-success">ورود</a>
-            </div>
-        {% endif %}
+        </div>
     </div>
     <br><br><br><br><br><br><br>
     <div id="footer" class="col-lg-12 Footer">

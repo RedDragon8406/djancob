@@ -162,7 +162,7 @@
                                     {{ item.price }} تومان
                                 {% endif %}
                                 </label> <a
-                                    href="/products/{{ item.id }}"
+                                    href="{{ item.get_absolute_url }}"
                                     class="btn btn-default"
                                     role="button">مشاهده ی محصول</a>
                                 </p>

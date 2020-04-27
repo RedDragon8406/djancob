@@ -39,14 +39,14 @@
         <item name="db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="courses_course: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="auth_user: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="masters_master: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="django_admin_log: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -60,9 +60,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -196,7 +196,10 @@
       <workItem from="1587320851773" duration="689000" />
       <workItem from="1587370776777" duration="598000" />
       <workItem from="1587389788308" duration="5130000" />
-      <workItem from="1587443981918" duration="12133000" />
+      <workItem from="1587443981918" duration="13513000" />
+      <workItem from="1587527042773" duration="9940000" />
+      <workItem from="1587566283156" duration="7867000" />
+      <workItem from="1587633116910" duration="135000" />
     </task>
     <servers />
   </component>
@@ -216,26 +219,26 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="415" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1586705918317" />
-    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1587267937137">
+    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1587633224893">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1587267937137" />
-    <state width="1326" height="175" key="GridCell.Tab.0.bottom" timestamp="1587470740388">
+    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1587633224893" />
+    <state width="1326" height="175" key="GridCell.Tab.0.bottom" timestamp="1587582470139">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="175" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1587470740388" />
-    <state width="1326" height="175" key="GridCell.Tab.0.center" timestamp="1587470740388">
+    <state width="1326" height="175" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1587582470139" />
+    <state width="1326" height="175" key="GridCell.Tab.0.center" timestamp="1587582470139">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="175" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1587470740388" />
-    <state width="1326" height="175" key="GridCell.Tab.0.left" timestamp="1587470740387">
+    <state width="1326" height="175" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1587582470139" />
+    <state width="1326" height="175" key="GridCell.Tab.0.left" timestamp="1587582470138">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="175" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1587470740387" />
-    <state width="1326" height="175" key="GridCell.Tab.0.right" timestamp="1587470740388">
+    <state width="1326" height="175" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1587582470138" />
+    <state width="1326" height="175" key="GridCell.Tab.0.right" timestamp="1587582470139">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="175" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1587470740388" />
+    <state width="1326" height="175" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1587582470139" />
     <state width="1326" height="281" key="GridCell.Tab.1.bottom" timestamp="1586802207244">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
