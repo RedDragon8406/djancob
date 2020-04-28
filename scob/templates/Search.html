@@ -108,7 +108,7 @@
                         <div class="thumbnail">
                             <img src="{{ item.image.url }}" alt="...">
                             <div class="caption">
-                                <hr style="margin-top: 0">
+                                <hr>
                                 <h3>{{ item.title }}</h3>
                                 <hr>
                                 {% if item.price == 0 %}
@@ -162,7 +162,7 @@
                                     {{ item.price }} تومان
                                 {% endif %}
                                 </label> <a
-                                    href="{{ item.get_absolute_url }}"
+                                    href="/products/{{ item.id }}"
                                     class="btn btn-default"
                                     role="button">مشاهده ی محصول</a>
                                 </p>

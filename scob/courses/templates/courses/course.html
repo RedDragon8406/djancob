@@ -99,13 +99,13 @@
             <div class="pish">
                 <div class="panel panel-heading text-center" style="font-size:large;font-weight: 500;">مدرس دوره
                     : {{ object.master }}</div>
-                <a href="/masters/{{ master_id }}">
-                    <img src="{{ master_img.url }}" class="img-circle" width="50%" height="50%"
+                <a href="/masters/{{ Master.id }}">
+                    <img src="{{ object.master_img.url }}" class="img-circle" width="50%" height="50%"
                          style="margin-right: 70px;">
                 </a>
                 <hr>
                 <p>
-                    {{ master_des }}
+                    {{ object.master_des }}
                 </p>
             </div>
 

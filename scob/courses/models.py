@@ -16,31 +16,20 @@ def upload_image_path(instance, filename):
     final_name = f"{instance.id}-{instance.title}{ext}"
     return f"courses/{final_name}"
 
-
-class CourseManager(models.Manager):
-    def get_by_id(self, courseId):
-        qs = self.get_queryset().filter(id=courseId)
-        if qs.count() == 1:
-            return qs.first()
-        return None
-
-
 class Course(models.Model):
     title = models.CharField(max_length=30)
     description = models.TextField()
-    # conditions
-    price = models.IntegerField(default=0)
+    #conditions
+    price = models.IntegerField(max_length=10,default=0)
     condition = models.CharField(max_length=20)
     master = models.CharField(max_length=20)
-    pqs = models.TextField(null=True, blank=True)
-    level = models.CharField(max_length=10, choices=[
-        ('A', 'مقدماتی'), ('B', 'متوسط'), ('C', 'پیشرفته'), ('D', 'فوق پیشرفته')
-    ], default='A')
-    # end conditions
-    image = models.ImageField(upload_to='courses/', null=True, blank=True)
-    topic = models.CharField(max_length=50, null=True, blank=True)
+    master_img = models.ImageField(upload_to='courses/',null=True,blank=True)
+    master_des = models.TextField(null=True,blank=True)
+    pqs = models.TextField(null=True,blank=True)
+    level = models.CharField(max_length=10)
+    #end conditions
+    image = models.ImageField(upload_to='courses/',null=True,blank=True)
+    topic = models.CharField(max_length=50,null=True,blank=True)
 
     def __str__(self):
         return self.title
-
-    objects = CourseManager()

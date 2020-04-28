@@ -1,19 +1,13 @@
-
-nav {
-    background-color: rgb(26, 106, 211);
-}
-
-.line-under-slide {
+@font-face { font-family: yekan; src: url('../files/fonts/B\ Yekan_YasDL.com.ttf');}
+.line-under-slide{
     border: black 1px solid;
 }
-
-.search-bar {
+.search-bar{
     width: 400px;
     font-family: yekan;
 
 }
-
-.course-btn {
+.course-btn{
     width: 70%;
     border-radius: 20px;
     font-size: 125%;
@@ -27,24 +21,19 @@ nav {
     color: black;
     font-family: yekan;
 }
-
-.btn-img {
+.btn-img{
     width: 100%;
 }
-
-.img-but {
+.img-but{
     height: 80%;
 }
-
 .img-but:hover img {
     filter: brightness(30%);
 }
-
-.img-but:hover .course-btn {
+.img-but:hover .course-btn{
     visibility: visible;
 }
-
-.price-box {
+.price-box{
     text-align: left;
     background-color: #1bc0f8;
     border-radius: 20px;
@@ -61,22 +50,18 @@ nav {
     margin-top: -7.5px;
     margin-left: 10px;
 }
-
-.href-thumb {
+.href-thumb{
     visibility: hidden;
     width: 0px;
     height: 0px;
 }
-
-.thumbnail {
+.thumbnail{
     height: 125%;
 }
-
 .Footer {
     background-color: rgb(34, 168, 221);
     width: 100%;
 }
-
 .Footer-H {
     font-family: yekan;
     color: white;
@@ -84,34 +69,30 @@ nav {
     margin-right: 40px;
     font-size: 25px;
 }
-
 .Footer-link {
     font-family: yekan;
     color: white;
     text-align: right;
     margin-right: 100px;
-    font-size: 20px;
+    font-size: 20px;  
 }
-
 .Footer-link:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0,0,0);
     text-decoration: none;
 
 }
-
 .Footer-link-1 {
     font-family: yekan;
     color: white;
     text-align: right;
     margin-right: 57.5px;
-    font-size: 20px;
+    font-size: 20px;  
 }
 
 .Footer-link-1:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0,0,0);
     text-decoration: none;
 }
-
 .div-alignment {
     margin-top: 60px;
     margin-left: auto;
@@ -119,4 +100,71 @@ nav {
     width: 80%;
     border: darkgrey dashed 5px;
     background-color: lightgray;
+}
+.item {
+    font-family: Arial;
+    float: left;
+    padding: 20px;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+  
+.item:hover {
+    background-color: #0083ca;
+}
+  
+.cont {
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 0;
+    margin: 0;
+}
+  
+.navbar {
+    font-weight: bold;
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-transition: background-color 1s, color 1s;
+    transition: background-color 1s, color 1s;
+}
+  
+.navbar:hover {
+    background-color: #00a2fc;
+    color: white;
+}
+  
+.navbar:hover .active {
+    background-color: white;
+    color: black;
+}
+  
+.top-pic {
+    width: 100%;
+    margin-top: -10%;
+    opacity: 0.6;
+}
+  
+.search-btn {
+    border: 1px black solid;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+  
+.search {
+    height: 30px;
+    width: 450px;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding-left: 15px;
+    text-align: left;
+}
+  
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
 }

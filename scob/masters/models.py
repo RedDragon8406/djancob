@@ -16,13 +16,6 @@ def upload_image_path(instance, filename):
     final_name = f"{instance.id}-{instance.title}{ext}"
     return f"masters/{final_name}"
 
-class MasterManager(models.Manager):
-    def get_by_id(self,masterId):
-        qs = self.get_queryset().filter(id=masterId)
-        if qs.count() == 1:
-            return qs.first()
-        return None
-
 class Master(models.Model):
     title = models.CharField(max_length=30)
     description = models.TextField()
@@ -30,5 +23,3 @@ class Master(models.Model):
 
     def __str__(self):
         return self.title
-
-    objects = MasterManager()

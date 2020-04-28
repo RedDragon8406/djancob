@@ -1,8 +1,4 @@
 @font-face { font-family: yekan; src: url('../files/fonts/B\ Yekan_YasDL.com.ttf');}
-
-nav{
-    background-color: rgb(26, 106, 211);
-}
 .line-under-slide{
     border: black 1px solid;
 }
@@ -104,4 +100,71 @@ nav{
     width: 80%;
     border: darkgrey dashed 5px;
     background-color: lightgray;
+}
+.item {
+    font-family: Arial;
+    float: left;
+    padding: 20px;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+  
+.item:hover {
+    background-color: #0083ca;
+}
+  
+.cont {
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 0;
+    margin: 0;
+}
+  
+.navbar {
+    font-weight: bold;
+    color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-transition: background-color 1s, color 1s;
+    transition: background-color 1s, color 1s;
+}
+  
+.navbar:hover {
+    background-color: #00a2fc;
+    color: white;
+}
+  
+.navbar:hover .active {
+    background-color: white;
+    color: black;
+}
+  
+.top-pic {
+    width: 100%;
+    margin-top: -10%;
+    opacity: 0.6;
+}
+  
+.search-btn {
+    border: 1px black solid;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+  
+.search {
+    height: 30px;
+    width: 450px;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding-left: 15px;
+    text-align: left;
+}
+  
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
 }

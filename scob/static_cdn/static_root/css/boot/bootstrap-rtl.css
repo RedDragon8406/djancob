@@ -240,9 +240,6 @@ table {
   h3 {
     page-break-after: avoid;
   }
-  .navbar {
-    display: none;
-  }
   .table td,
   .table th {
     background-color: #fff !important;
@@ -3489,13 +3486,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
   margin-top: -1px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-}
-.navbar {
-  position: relative;
-  z-index: 1000;
-  min-height: 50px;
-  margin-bottom: 20px;
-  border: 1px solid transparent;
 }
 .navbar:before,
 .navbar:after {
