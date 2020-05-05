@@ -319,6 +319,9 @@ nav {
   .items {
     display: none;
   }
+  .ndd {
+    display: none;
+  }
   .lists {
     visibility: visible;
     zoom: 1.5;
