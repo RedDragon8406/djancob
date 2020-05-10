@@ -1,0 +1,56 @@
+<div class="thumbnail">
+    <style>
+        .filter-thumb img {
+            transition: all ease-in-out 200ms;
+        }
+
+        .filter-thumb:hover img {
+            filter: brightness(40%);
+        }
+        .thumbnail{
+            border: solid 1px lightgray;
+        }
+    </style>
+    <a class="filter-thumb" href="/{{ type }}/{{ address }}">
+        <img src="{{ item.image.url }}" alt="...">
+    </a>
+    <div class="caption">
+        <hr>
+        <h4 class="text-center">{{ item.title }}</h4>
+        <hr>
+        {% if type == 'courses' %}
+            {% if item.price == 0 %}
+                <p><label style="zoom: 0.8" class="btn btn-success">
+                    {% elif item.price < 50000 %}
+                <p><label style="zoom: 0.8" class="btn btn-primary">
+                    {% elif item.price < 100000 %}
+                <p><label style="zoom: 0.8" class="btn btn-warning">
+                    {% else %}
+                <p><label style="zoom: 0.8" class="btn btn-danger">
+            {% endif %}
+        {% endif %}
+        {% if type == 'products' %}
+            {% if item.price < 100000 %}
+                <label class="btn btn-success price-label">
+            {% elif item.price < 500000 %}
+                <label class="btn btn-primary price-label">
+            {% elif item.price < 1000000 %}
+                <label class="btn btn-warning price-label">
+            {% else %}
+                <label class="btn btn-danger price-label">
+            {% endif %}
+        {% endif %}
+
+
+        {% if item.price == 0 %}
+            رایگان
+        {% else %}
+            {{ item.price }} تومان
+        {% endif %}
+        </label> <a style="zoom: 0.8;float: left"
+                    href="/{{ type }}/{{ address }}"
+                    class="btn btn-default"
+                    role="button">مشاهده ی دوره</a>
+        </p>
+    </div>
+</div>

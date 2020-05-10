@@ -1,43 +1,36 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static "css/boot/bootstrap-rtl.css" %}">
-    <link rel="stylesheet" href="{% static "css/main-css.css" %}">
-    <link rel="icon" href="{% static "images/Scob icon.png" %}">
-    <link rel="glyphicon" href="{% static "fonts/glyphicons-halflings-regular.svg" %}">
-    <script src="{% static "js/Scripts/jquery-1.10.2.min.js" %}"></script>
-    <script src="{% static "js/Scripts/bootstrap-rtl.js" %}"></script>
-</head>
+{% block header_style %}
+    <style>
+        .main-main-bg{
+            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("{% static "images/bg-fav.png" %}") center ;
+            padding: 25px;
 
-<body>
-<div class="container">
-    <div id="header">
-        <img src="19858.jpg" class="top-pic" alt="">
-        <header class="header">
-            <!-- <form align="center" class="input-form">
-                <input type="text" placeholder="search something ..." class="search">
-                <button class="search-btn">Search</button>
-                <br>
-            </form> -->
-            <img src="" alt="">
-        </header>
-        <nav class="navbar">
-            <ul class="cont">
-                <li class="item active">home</li>
-                <li class="item">about us</li>
-                <li class="item">link 1 </li>
-                <li class="item">link 2</li>
-                <li class="item">link 3</li>
-                <br>
-            </ul>
-        </nav>
-    </div>
+        }
+        .edu-cls {
+            transition: all ease-in-out 200ms;
+            text-decoration: none;
+            color: black;
+        }
+
+        .edu-cls:hover {
+            letter-spacing: 0.5px;
+            color: #00b6ff;
+            text-decoration: none;
+        }
+
+        .badge:hover {
+            background-color: #00acff;
+        }
+
+        .badge {
+            transition: all ease-in-out 200ms;
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
     <div class="row" style="margin-top: 60px;">
         <div id="sidebar" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="panel panel-primary">
@@ -47,18 +40,24 @@
                 <div class="panel-body">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="/search?searching=frontend" class="badge">{{ front_topic }}</a> آموزش های وب -
-                            فرانت اند
+                            <a href="/search?searching=frontend" class="badge">{{ front_topic }}</a>
+                            <a href="/search?searching=frontend" class="edu-cls"> آموزش های وب -فرانت اند</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="/search?searching=backend" class="badge">{{ back_topic }}</a> آموزش های وب - بک اند
+                            <a href="/search?searching=backend" class="badge">{{ back_topic }}</a>
+                            <a href="/search?searching=backend" class="edu-cls"> آموزش های وب- بک اند</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="/search?searching=python" class="badge">{{ python_topic }}</a> آموزش های پایتون
+                            <a href="/search?searching=python" class="badge">{{ python_topic }}</a>
+                            <a href="/search?searching=python" class="edu-cls"> آموزش های پایتون</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="/search?searching=graphics" class="badge">{{ graphics_topic }}</a> آموزش نرم افزار
-                            های گرافیکی
+                            <a href="/search?searching=csharp" class="badge">{{ cs_topic }}</a>
+                            <a href="/search?searching=csharp" class="edu-cls"> آموزش های سی شارپ</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/search?searching=graphics" class="badge">{{ graphics_topic }}</a>
+                            <a href="/search?searching=graphics" class="edu-cls"> آموزش نرم افزار های گرافیکی</a>
                         </li>
                     </ul>
                 </div>
@@ -72,16 +71,20 @@
                 <div class="panel-body">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="/search?searching=home" class="badge">{{ home_topic }}</a>خانه
+                            <a href="/search?searching=home" class="badge">{{ home_topic }}</a>
+                            <a href="/search?searching=home" class="edu-cls">خانه</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="/search?searching=farming" class="badge">{{ farming_topic }}</a>کشاورزی
+                            <a href="/search?searching=farming" class="badge">{{ farming_topic }}</a>
+                            <a href="/search?searching=farming" class="edu-cls">کشاورزی</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="/search?searching=digital" class="badge">{{ digital_topic }}</a>لوازم دیجیتال
+                            <a href="/search?searching=digital" class="badge">{{ digital_topic }}</a>
+                            <a href="/search?searching=digital" class="edu-cls">لوازم دیجیتال</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="/search?searching=book" class="badge">{{ book_topic }}</a>کتاب
+                            <a href="/search?searching=book" class="badge">{{ book_topic }}</a>
+                            <a href="/search?searching=book" class="edu-cls">کتاب</a>
                         </li>
                     </ul>
                 </div>
@@ -165,107 +168,75 @@
             </div>
             <br>
             <hr class="line-under-slide">
-            <h3>آخرین آموزش ها-----------------------------------------------------------------------<a href="/courses"
-                                                                                                        class="btn btn-info"
-                                                                                                        style="font-weight: 700">مشاهده
+            <h3>آخرین آموزش ها-------------------------------------------------------------------<a href="/courses"
+                                                                                                    class="btn btn-info"
+                                                                                                    style="font-weight: 700">مشاهده
                 ی همه ی دوره ها</a></h3>
 
             <div class="row">
                 {% for item in last_courses %}
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail">
-                            <img src="{{ item.image.url }}" alt="...">
-                            <div class="caption">
-                                <hr>
-                                <h3>{{ item.title }}</h3>
-                                <hr>
-                                {% if item.price == 0 %}
-                                    <p><label class="btn btn-success">
-                                        {% elif item.price < 50000 %}
-                                    <p><label class="btn btn-primary">
-                                        {% elif item.price < 100000 %}
-                                    <p><label class="btn btn-warning">
-                                        {% else %}
-                                    <p><label class="btn btn-danger">
-                                {% endif %}
-                                {% if item.price == 0 %}
-                                    رایگان
-                                {% else %}
-                                    {{ item.price }} تومان
-                                {% endif %}
-                                </label> <a
-                                    href="/courses/{{ item.id }}"
-                                    class="btn btn-default"
-                                    role="button">مشاهده ی دوره</a>
-                                </p>
-                            </div>
-                        </div>
+                        {% include "base/item-thumb.html" with item=item type='courses' address=item.id %}
                     </div>
                 {% endfor %}
             </div>
 
 
             <hr class="line-under-slide">
-            <h3>آخرین محصولات---------------------------------------------------------------------<a href="/products"
-                                                                                                     class="btn btn-info"
-                                                                                                     style="font-weight: 700">مشاهده
+            <h3>آخرین محصولات----------------------------------------------------------------<a href="/products"
+                                                                                                class="btn btn-info"
+                                                                                                style="font-weight: 700">مشاهده
                 ی همه ی محصولات</a></h3>
             <br>
 
             <div class="row">
                 {% for item in last_products %}
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail">
-                            <img src="{{ item.image.url }}" alt="...">
-                            <div class="caption">
-                                <hr>
-                                <h3>{{ item.title }}</h3>
-                                <hr>
-                                {% if item.price < 100000 %}
-                                    <p><label class="btn btn-success">
-                                        {% elif item.price < 500000 %}
-                                    <p><label class="btn btn-primary">
-                                        {% elif item.price < 1000000 %}
-                                    <p><label class="btn btn-warning">
-                                        {% else %}
-                                    <p><label class="btn btn-danger">
-                                {% endif %}
-                                {% if item.price == 0 %}
-                                    رایگان
-                                {% else %}
-                                    {{ item.price }} تومان
-                                {% endif %}
-                                </label> <a
-                                    href="/products/{{ item.id }}"
-                                    class="btn btn-default"
-                                    role="button">مشاهده ی دوره</a>
-                                </p>
-                            </div>
-                        </div>
+                        {% include "base/item-thumb.html" with item=item type='products' address=item.slug %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+        <div id="main" class="col-12 main-main-bg">
+
+            <hr class="line-under-slide">
+            <h3>دوره های
+                پیسنهادی
+                ---------------------------------------------------------------------------------------------<a
+                        href="/products"
+                        class="btn btn-info"
+                        style="font-weight: 700">مشاهده
+                    ی همه ی محصولات</a></h3>
+            <br>
+
+            <div class="row">
+                {% for item in favorite_courses %}
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        {% include "base/item-thumb.html" with item=item type='courses' address=item.id %}
                     </div>
                 {% endfor %}
             </div>
 
-        </div>
-    </div>
-    <div id="footer" class="col-lg-12 Footer">
-        <br>
-        <div align="right">
-            <span align="right" class="Footer-H">پیوند ها</span>
+            <hr class="line-under-slide">
+            <h3>محصولات
+                پیسنهادی
+                --------------------------------------------------------------------------------------------<a
+                        href="/products"
+                        class="btn btn-info"
+                        style="font-weight: 700">مشاهده
+                    ی همه ی محصولات</a></h3>
             <br>
-            <a href="/"><span align="right" class="Footer-link">خانه</span></a>
-            <a href="/login"><span class="Footer-link">ورود</span></a>
-            <br>
-            <a href="/contact_us"><span class="Footer-link">تماس با ما</span></a>
-            <a href="/register"><span class="Footer-link-1">ثبت نام</span></a>
 
-            <br>
-            <a href="/about-us"><span class="Footer-link">درباره ما</span></a>
-            <br>
+            <div class="row">
+                {% for item in favorite_products %}
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        {% include "base/item-thumb.html" with item=item type='products' address=item.slug %}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-        <br>
-    </div>
-</div>
-</body>
 
-</html>
+
+
+{% endblock %}

@@ -7,16 +7,30 @@ from courses.models import Course
 from products.models import Product
 
 
+def main(request):
+    tedad_c = Course.objects.count() - 1
+    lastest_c = Course.objects.all()[(tedad_c - 2):]
+
+
+    context = {
+        'title' : 'صفحه اصلی',
+        "last_courses": lastest_c,
+    }
+    return render(request,'main-courses.html',context)
+
 def main_page(request):
     print(f"is user logged in : {request.user.is_authenticated}")
     tedad_c = Course.objects.count() - 1
     lastest_c = Course.objects.all()[(tedad_c - 2):]
     tedad_p = Product.objects.count() - 1
     lastest_p = Product.objects.all()[(tedad_p - 2):]
-
+    favorite_c = Course.objects.all()[3:7]
+    favorite_p = Product.objects.all()[1:5]
+    print(favorite_p)
     front_topic = Course.objects.filter(topic__contains="frontend").count()
     back_topic = Course.objects.filter(topic__contains="backend").count()
     python_topic = Course.objects.filter(topic__contains="python").count()
+    cs_topic = Course.objects.filter(topic__contains="csharp").count()
     graphics_topic = Course.objects.filter(topic__contains="graphics").count()
 
     home_topic = Product.objects.filter(topic__contains="home").count()
@@ -29,10 +43,13 @@ def main_page(request):
 
     context = {
         "last_courses": lastest_c,
+        "favorite_courses": favorite_c,
         "last_products": lastest_p,
+        "favorite_products": favorite_p,
         "front_topic": front_topic,
         "back_topic": back_topic,
         "python_topic": python_topic,
+        "cs_topic": cs_topic,
         "graphics_topic": graphics_topic,
         "home_topic": home_topic,
         "farming_topic": farming_topic,
@@ -43,6 +60,10 @@ def main_page(request):
     }
 
     return render(request, "main.html", context)
+
+
+def restaurant_page(request):
+    return render(request,"restaurant.html",{})
 
 
 def contact_page(request):

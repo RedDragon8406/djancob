@@ -36,11 +36,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres.fields',
 
     #scob's apps
     'courses',
     'products',
     'masters',
+    'cart',
 ]
 
 MIDDLEWARE = [

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="3c8409fc-4b5b-4e59-9cea-a6491c47a3b8">
+    <data-source source="LOCAL" name="db" uuid="ed6dfd6e-4226-4175-bfb0-e9e6e6ac1238">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
@@ -13,9 +13,15 @@
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/sqlite-jdbc-3.25.1.jar</url>
         </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/license.txt</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/sqlite-jdbc-3.25.1.jar</url>
+        </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Django default" uuid="c05ba886-b4f4-4fdb-b2da-20ac18e65b44">
+    <data-source source="LOCAL" name="Django default" uuid="e64a51d5-de2f-4ab5-b7e1-ff36691ac94c">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>

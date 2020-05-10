@@ -1,0 +1,204 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "css/restaurant.css" %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Josefin+Sans:300,400,600,700|Nunito:300,400,600,700"
+        rel="stylesheet">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <!-- start navbar section -->
+    <nav class="navbar">
+        <input type="checkbox" id="check" class="checkbox" hidden>
+        <div class="hamburger-menu">
+            <label for="check" class="menu">
+                <div class="menu-line menu-line-1"></div>
+                <div class="menu-line menu-line-2"></div>
+                <div class="menu-line menu-line-3"></div>
+            </label>
+        </div>
+        <div class="navbar-navigation">
+            <div class="navbar-navigation-left">
+                <img src="{% static "images/restaurant/nav-img-1.jpeg" %}" class="left-img left-img-1">
+                <img src="{% static "images/restaurant/nav-img-2.jpeg" %}" class="left-img left-img-2">
+                <img src="{% static "images/restaurant/nav-img-3.jpeg" %}" class="left-img left-img-3">
+            </div>
+            <div class="navbar-navigation-right">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="/" class="nav-list-link">خانه</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/about-us" class="nav-list-link">درباره ما</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-list-link">گالری تصایر</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-list-link">رزرو میز</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-list-link">سرویس ها</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/contact-us" class="nav-list-link">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <!-- end navbar section -->
+    <!-- start header -->
+    <header class="header">
+        <div class="brand"><a href="#" class="logo">
+                <i class="fa fa-utensils"></i>
+            </a>
+            <div>
+                <h1 class="main-name">رستوران اسکوب</h1>
+                <p class="sub-name">غذا های لذیذ ما</p>
+            </div>
+        </div>
+        <div class="header-banner">
+            <h1 class="main-heading">خوش آمدید</h1>
+            <h3 class="sub-heading">غذا های ما را امتحان کنید</h3>
+            <button class="main-btn" type="button">رزرو میز</button>
+        </div>
+
+    </header>
+    <!-- end header -->
+    <!-- start about-us -->
+    <section class="about-us">
+        <div class="about-us-left">
+            <img src="{% static "images/restaurant/about-us-img.png" %}" alt="">
+        </div>
+        <div class="about-us-right">
+            <h1 class="main-heading">درباره ی رستوران</h1>
+            <h3 class="sub-heading">درباره دستپخت سپهر کاردل</h3>
+            <div class="stars">
+                <i class="fa fa-star-of-life star"></i>
+                <i class="fa fa-star-of-life star"></i>
+                <i class="fa fa-star-of-life star"></i>
+            </div>
+            <p class="description">
+            مهم :اگر میخواهید بدانید و استفاده کنید حتما یک کپسول آتش نشانی همراه خودتان داشته باشید</p>
+            <div class="stars">
+                <i class="fa fa-star-of-life star"></i>
+                <i class="fa fa-star-of-life star"></i>
+                <i class="fa fa-star-of-life star"></i>
+            </div>
+            <button type="button" class="main-btn">اطلاعات بیشتر</button>
+        </div>
+    </section>
+    <!-- end about-us -->
+    <!-- start gallery -->
+    <section class="gallery">
+        <div class="cards-wrapper">
+
+
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">نام غذا</h1>
+                    <p class="card-overlay-paragraph">قیمت : 500 تومان</p>
+                    <button type="button" class="card-overlay-btn">سفارش</button>
+                </div>
+                <img src="{% static "images/restaurant/gallery-img-1.jpeg" %}" class="card-img">
+            </div>
+
+
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">نام غذا</h1>
+                    <p class="card-overlay-paragraph">قیمت : 500 تومان</p>
+                    <button type="button" class="card-overlay-btn">سفارش</button>
+                </div>
+                <img src="{% static "images/restaurant/gallery-img-2.jpeg" %}" class="card-img">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">نام غذا</h1>
+                    <p class="card-overlay-paragraph">قیمت : 500 تومان</p>
+                    <button type="button" class="card-overlay-btn">سفارش</button>
+                </div>
+                <img src="{% static "images/restaurant/gallery-img-3.jpeg" %}" class="card-img">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">نام غذا</h1>
+                    <p class="card-overlay-paragraph">قیمت : 500 تومان</p>
+                    <button type="button" class="card-overlay-btn">سفارش</button>
+                </div>
+                <img src="{% static "images/restaurant/gallery-img-4.jpeg" %}" class="card-img">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">نام غذا</h1>
+                    <p class="card-overlay-paragraph">قیمت : 500 تومان</p>
+                    <button type="button" class="card-overlay-btn">سفارش</button>
+                </div>
+                <img src="{% static "images/restaurant/gallery-img-5.jpeg" %}" class="card-img">
+            </div>
+            <div class="card">
+                <div class="card-overlay">
+                    <h1 class="card-overlay-heading">نام غذا</h1>
+                    <p class="card-overlay-paragraph">قیمت : 500 تومان</p>
+                    <button type="button" class="card-overlay-btn">سفارش</button>
+                </div>
+                <img src="{% static "images/restaurant/gallery-img-6.jpeg" %}" class="card-img">
+            </div>
+        </div>
+    </section>
+    <!-- end gallery -->
+    <!-- start footer section -->
+    <footer class="footer">
+        <div class="footer-header">
+            <a href="#" class="logo">
+                <i class="fa fa-utensils"></i>
+            </a>
+            <div>
+                <h1 class="main-name">رستوران اسکوب</h1>
+                <p class="sub-name">غذاهای لذیذ ما</p>
+            </div>
+        </div>
+        <div class="footer-social-media">
+            <ul class="social-media">
+                <li class="social-media-item">
+                    <a href="#" class="social-media-link">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="#" class="social-media-link">
+                        <i class="fab fa-google-plus-square"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="#" class="social-media-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="social-media-item">
+                    <a href="#" class="social-media-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <p class="footer-copyright-paragraph">
+                &copy; کپی رایت. تمام حقوق این سایت متعلق به اسکوب میباشد
+            </p>
+        </div>
+    </footer>
+    <!-- end footer section -->
+</body>
+
+</html>

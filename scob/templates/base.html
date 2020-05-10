@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include "base/css.html" %}
+    {% block header_style %}{% endblock %}
+</head>
+
+<body style="font-family: Sahel;">
+<div class="container">
+    {% include "base/nav.html" %}
+    <br><br><br>
+    {% block main %}{% endblock %}
+    <br><br><br>
+    {% include "base/footer.html" %}
+</div>
+</body>
+
+</html>
