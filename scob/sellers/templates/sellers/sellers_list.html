@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+    <br>
+    <h1 class="text-center">همه فروشندگان</h1>
+    <br>
+    <div class="row">
+        {% for seller in object_list %}
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img class="img-circle" src="{{ seller.image.url }}" alt="{{ seller.title }}">
+                    <div class="caption">
+                        <hr>
+                        <h3>{{ seller.title }}</h3>
+                        <hr>
+                        <p><a href="/sellers/{{ seller.id }}" class="btn btn-default"
+                           role="button">مشاهده ی فروشنده</a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <br><br><br><br><br><br>
+{% endblock %}

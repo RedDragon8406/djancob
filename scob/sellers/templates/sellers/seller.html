@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header_style %}
+    <link rel="stylesheet" href="{% static "css/master.css" %}">
+{% endblock %}
+
+
+{% block main %}
+    <br><br><br><br>
+    <div class="row">
+        <div class="profile">
+            <div class="style">
+                <div class="information">
+                    <div class="name">
+                        <img class="img-circle" width="100%" src="{{ object.image.url }}" alt="">
+                        <h2 class="master_title">{{ object.name }}</h2>
+                    </div>
+                    <div class="head_des">
+                        <p>{{ object.description }}</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="term-list">
+            <header class="section-heading">
+                <h2>محصول های {{ object.name }}</h2>
+                <span>{{ products_length }} محصول</span>
+
+                <div class="row" style="padding: 25px 0">
+                    {% for product in products %}
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            {% include "base/item-thumb.html" with item=product type='products' address=product.slug %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </header>
+        </div>
+    </div>
+    <br><br><br><br><br>
+{% endblock %}

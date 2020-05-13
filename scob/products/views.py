@@ -1,11 +1,32 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import Product
 # from cart.models import Cart
 from django.http import Http404
-
-
+from.models import Product
+from sellers.models import Seller
+import json
 # Create your views here.
+
+def main_product(request):
+    title = 'محصولات اسکوب'
+    lenght_products = Product.objects.count()
+    last_products = Product.objects.all()[lenght_products-3:]
+    lenght_sellers = Seller.objects.count()
+
+    with open("categories.json", "r") as file:
+        length_ProductCategories = json.load(file)
+
+    length_ProductCategories = len(length_ProductCategories['categories'])
+
+
+    context = {
+        'title':title,
+        'last_products':last_products,
+        'length_sellers':lenght_sellers,
+        'length_ProductCategories':length_ProductCategories,
+    }
+    return render(request,'products/main-products.html',context)
+
 
 def product_list_view(request):
     products = Product.objects.all()

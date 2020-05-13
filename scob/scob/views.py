@@ -5,18 +5,8 @@ from django.db.models import Q
 
 from courses.models import Course
 from products.models import Product
+from masters.models import Master
 
-
-def main(request):
-    tedad_c = Course.objects.count() - 1
-    lastest_c = Course.objects.all()[(tedad_c - 2):]
-
-
-    context = {
-        'title' : 'صفحه اصلی',
-        "last_courses": lastest_c,
-    }
-    return render(request,'main-courses.html',context)
 
 def main_page(request):
     print(f"is user logged in : {request.user.is_authenticated}")
@@ -40,6 +30,8 @@ def main_page(request):
 
     users = User.objects.all()
     title = "اسکوب |‌صفحه ی اصلی"
+
+
 
     context = {
         "last_courses": lastest_c,

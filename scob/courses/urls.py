@@ -18,9 +18,11 @@ from django.urls import path
 from courses.views import (
     course_detail_view,
     courses_list_view,
+    main_course,
 )
 
 urlpatterns = [
-    path('', courses_list_view),
-    path('<id>', course_detail_view),
+    path('', main_course),
+    path('courses-list', courses_list_view),
+    path('<courseId>', course_detail_view),
 ]

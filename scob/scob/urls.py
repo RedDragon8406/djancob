@@ -16,35 +16,34 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from .views import main_page, login_page, register_page, logout_page, contact_page, about_page
-from .views import search_page,restaurant_page,main
-
+from .views import search_page,restaurant_page
 from django.conf import settings
 from django.conf.urls.static import static
 from cart.views import cart_page
+from sellers.views import seller_list_view,seller_detail_view
 from courses.views import courses_list_view,course_detail_view
 from products.views import product_list_view,product_detail_view
 from masters.views import master_list_view,master_detail_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main_page),
-    path('main', main),
-    path('restaurant', restaurant_page),
-    path('login', login_page),
-    path('register', register_page),
-    path('logout', logout_page),
-    path('contact-us', contact_page),
-    path('about-us', about_page),
-    path('search', search_page),
-    path('courses', courses_list_view),
-    path('products-fbv', product_list_view),
-    path('masters', master_list_view),
-    path('cart', cart_page),
-    path('products-fbv/<productId>', product_detail_view),
-    path('courses/<courseId>', course_detail_view),
-    path('masters/<masterId>', master_detail_view),
+    path('', main_page,name='home_url'),
+    path('restaurant', restaurant_page,name='res_url'),
+    path('login', login_page,name='login_url'),
+    path('register', register_page,name='register_url'),
+    path('logout', logout_page,name='logout_url'),
+    path('contact-us', contact_page,name='contact_url'),
+    path('about-us', about_page,name='about_url'),
+    path('search', search_page,name='search_url'),
+    path('products-fbv', product_list_view,name='products-fbv_url'),
+    path('masters', master_list_view,name='masters_url'),
+    path('cart', cart_page,name='cart_url'),
+    path('sellers', seller_list_view,name='sellers_url'),
+    path('sellers/<sellerId>', seller_detail_view,name='seller_url'),
+    path('masters/<masterId>', master_detail_view,name='master_url'),
     path('products/',include('products.urls')),
-    path('courses/',include('courses.urls'))
+    path('courses/',include('courses.urls')),
+
 ]
 
 if settings.DEBUG:  # add static files

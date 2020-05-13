@@ -19,11 +19,12 @@ from products.views import (
     ProductListView,
     ProductDetailView,
     ProductExistentListView,
-    ProductDetailSlugView,
+    ProductDetailSlugView, main_product,
 )
 
 urlpatterns = [
-    path('', ProductListView.as_view()),
+    path('', main_product),
+    path('products-list', ProductListView.as_view()),
     path('existent', ProductExistentListView.as_view()),
     path('<slug>', ProductDetailSlugView.as_view()),
     # path('<pk>', ProductDetailView.as_view()),

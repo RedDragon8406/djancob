@@ -1,4 +1,7 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
+from .models import Course
+from masters.models import Master
 from .models import Course
 from masters.models import Master
 from django.http import Http404
@@ -6,8 +9,29 @@ from django.http import Http404
 
 # Create your views here.
 
+def main_course(request):
+    title = 'دوره های اسکوب'
+
+    tedad_c = Course.objects.count()
+    last_courses = Course.objects.all()[tedad_c - 3:]
+
+
+
+    number_of_courses = Course.objects.count()
+    number_of_users = User.objects.count()
+    number_of_masters = Master.objects.count()
+    context = {
+        'title':title,
+        'number_of_courses': number_of_courses,
+        'number_of_users' : number_of_users,
+        'number_of_masters' : number_of_masters,
+        'last_courses':last_courses,
+    }
+    return render(request,'courses/main-courses.html',context)
+
+
 def courses_list_view(request):
-    products = Course.objects.all()
+    products = Course.objects.all()[::-1]
     title = "دوره ها"
     context = {
         "object_list": products,

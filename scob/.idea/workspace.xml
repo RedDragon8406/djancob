@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -31,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="ToolWindowR Tools.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/exchange" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -46,18 +46,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\django\scob\assets\css" />
+      <recent name="D:\django\scob" />
+      <recent name="D:\django\scob\products" />
+      <recent name="D:\django\scob\templates\base" />
       <recent name="D:\django\scob\masters\templates\masters" />
-      <recent name="D:\django\scob\products\templates" />
-      <recent name="D:\django\scob\courses\templates\courses" />
-      <recent name="D:\django\scob\assets\images\masters" />
-      <recent name="D:\django\scob\templates\auth" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\django\scob\assets\images" />
+      <recent name="D:\django\scob\assets\images\products" />
+      <recent name="D:\django\scob\assets\css" />
       <recent name="D:\django\scob\templates" />
       <recent name="D:\django\scob\assets\js" />
-      <recent name="D:\django\scob\assets\images" />
-      <recent name="D:\django\scob\assets\css" />
-      <recent name="D:\django\scob\assets\images\restaurant" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.scob">
@@ -97,16 +97,20 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
+      <option name="port" value="9999" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:9999/" />
+      <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.scob" />
+      <item itemvalue="Python.translator" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.translator" />
@@ -174,7 +178,14 @@
       <workItem from="1588850516578" duration="599000" />
       <workItem from="1588934264764" duration="601000" />
       <workItem from="1589025971163" duration="1228000" />
-      <workItem from="1589104350266" duration="635000" />
+      <workItem from="1589104350266" duration="3357000" />
+      <workItem from="1589175642469" duration="4655000" />
+      <workItem from="1589183967482" duration="2608000" />
+      <workItem from="1589211898187" duration="2480000" />
+      <workItem from="1589274758670" duration="560000" />
+      <workItem from="1589292892645" duration="5275000" />
+      <workItem from="1589344161326" duration="16078000" />
+      <workItem from="1589387444718" duration="1211000" />
     </task>
     <servers />
   </component>
@@ -182,18 +193,18 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="277" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589104385929">
+    <state x="277" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589184257346">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1589104385929" />
+    <state x="277" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1368.872@0.0.1368.872" timestamp="1589184257346" />
     <state x="447" y="239" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588745942697">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="447" y="239" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1368.872@0.0.1368.872" timestamp="1588745942697" />
-    <state x="415" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586705918317">
+    <state x="415" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589368295269">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="415" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1586705918317" />
+    <state x="415" y="183" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1368.872@0.0.1368.872" timestamp="1589368295269" />
     <state x="393" y="23" key="#scob" timestamp="1588071545484">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -202,22 +213,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1589029075222" />
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1588788805345">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1589390935756">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1588788805345" />
-    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1588788805345">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1589390935756" />
+    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1589390935756">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1588788805345" />
-    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1588788805345">
+    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1589390935756" />
+    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1589390935756">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1588788805345" />
-    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1588788805345">
+    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1589390935756" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1589390935756">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1588788805345" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1589390935756" />
     <state width="1326" height="281" key="GridCell.Tab.1.bottom" timestamp="1586802207244">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -258,10 +269,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="394" y="78" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1368.872@0.0.1368.872" timestamp="1586800679109" />
-    <state x="352" y="189" width="672" height="678" key="search.everywhere.popup" timestamp="1588438438961">
+    <state x="363" y="200" width="672" height="678" key="search.everywhere.popup" timestamp="1589370655483">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="352" y="189" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1588438438961" />
+    <state x="363" y="200" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1589370655483" />
     <state x="407" y="348" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1586699676508">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

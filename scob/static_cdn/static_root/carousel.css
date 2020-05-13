@@ -1,0 +1,22 @@
+
+
+.ingo .carousel .carousel-inner .item {
+    -webkit-transition: all 1.1s ease-in-out, opacity 1s ease-in;
+    -moz-transition: all 1.1s ease-in-out, opacity 1s ease-in;
+    -ms-transition: all 1.1s ease-in-out, opacity 1s ease-in;
+    -o-transition: all 1.1s ease-in-out, opacity 1s ease-in;
+    transition: all 1.1s ease-in-out, opacity 1s ease-in;
+}
+.ingo .carousel .carousel-inner .item,
+.ingo .carousel .carousel-inner .active.left,
+.ingo .carousel .carousel-inner .active.right {
+    opacity: 0 !important;
+}
+.ingo .carousel .carousel-inner .active,
+.ingo .carousel .carousel-inner .next.left,
+.ingo .carousel .carousel-inner .prev.right {
+    opacity: 1 !important;
+}
+.pubCarousel.carousel .carousel-control {
+    z-index: 2 !important;
+}
