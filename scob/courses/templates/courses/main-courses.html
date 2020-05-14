@@ -9,7 +9,9 @@
             <br><br>
             {% if not request.user.is_authenticated %}
                 <h3 class="slide-top-h3">همین حالا رایگان ثبت نام کنید!</h3>
-                <button class="btn btn-primary btn-lg btn-font" id="s">ثبت نام در اسکوب</button>
+                <a href="/register">
+                    <button class="btn btn-primary btn-lg btn-font" id="s">ثبت نام در اسکوب</button>
+                </a>
             {% endif %}
             <br><br><br>
             <div class="st">

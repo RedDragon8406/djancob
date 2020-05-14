@@ -11,11 +11,11 @@ def main_product(request):
     title = 'محصولات اسکوب'
     lenght_products = Product.objects.count()
     last_products = Product.objects.all()[lenght_products-3:]
-    lenght_sellers = Seller.objects.count()
+
 
     with open("categories.json", "r") as file:
         length_ProductCategories = json.load(file)
-
+    lenght_sellers = Seller.objects.count()
     length_ProductCategories = len(length_ProductCategories['categories'])
 
 

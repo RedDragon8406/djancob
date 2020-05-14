@@ -1,242 +1,153 @@
 {% extends "base.html" %}
 {% load static %}
-
-{% block header_style %}
-    <style>
-        .main-main-bg{
-            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url("{% static "images/bg-fav.png" %}") center ;
-            padding: 25px;
-
-        }
-        .edu-cls {
-            transition: all ease-in-out 200ms;
-            text-decoration: none;
-            color: black;
-        }
-
-        .edu-cls:hover {
-            letter-spacing: 0.5px;
-            color: #00b6ff;
-            text-decoration: none;
-        }
-
-        .badge:hover {
-            background-color: #00acff;
-        }
-
-        .badge {
-            transition: all ease-in-out 200ms;
-        }
-    </style>
-{% endblock %}
-
-{% block main %}
-    <div class="row" style="margin-top: 60px;">
-        <div id="sidebar" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">آموزش های مختلف : </h3>
-                </div>
-                <div class="panel-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="/search?searching=frontend" class="badge">{{ front_topic }}</a>
-                            <a href="/search?searching=frontend" class="edu-cls"> آموزش های وب -فرانت اند</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/search?searching=backend" class="badge">{{ back_topic }}</a>
-                            <a href="/search?searching=backend" class="edu-cls"> آموزش های وب- بک اند</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/search?searching=python" class="badge">{{ python_topic }}</a>
-                            <a href="/search?searching=python" class="edu-cls"> آموزش های پایتون</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/search?searching=csharp" class="badge">{{ cs_topic }}</a>
-                            <a href="/search?searching=csharp" class="edu-cls"> آموزش های سی شارپ</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/search?searching=graphics" class="badge">{{ graphics_topic }}</a>
-                            <a href="/search?searching=graphics" class="edu-cls"> آموزش نرم افزار های گرافیکی</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">محصولات مختلف : </h3>
-                </div>
-                <div class="panel-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="/search?searching=home" class="badge">{{ home_topic }}</a>
-                            <a href="/search?searching=home" class="edu-cls">خانه</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/search?searching=farming" class="badge">{{ farming_topic }}</a>
-                            <a href="/search?searching=farming" class="edu-cls">کشاورزی</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/search?searching=digital" class="badge">{{ digital_topic }}</a>
-                            <a href="/search?searching=digital" class="edu-cls">لوازم دیجیتال</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="/search?searching=book" class="badge">{{ book_topic }}</a>
-                            <a href="/search?searching=book" class="edu-cls">کتاب</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+{% block main-content %}
+    <div class="pic-layer">
+        <div class="itm">
+            <h3 class="slide-top-h3">شاخه ای از تجربه، هم اندیشی، یادگیری و ارتباطات</h3>
+            <h3 class="slide-top-h3">وب سایت بزرگ اسکوب</h3>
             <br><br>
-            {% if request.user.is_superuser %}
-                <table class="table table-bordered table-hover">
-                    <tr class="active">
-                        <th>#</th>
-                        <th>نام</th>
-                        <th>فامیلی</th>
-                        <th>ادمین</th>
-                    </tr>
-                    {% for user in users %}
-
-                        <tr>
-                            <td>{{ user.id }}</td>
-                            <td>
-                                {% if user.first_name == '' %}
-                                    اسم ندارد
-                                {% else %}
-                                    {{ user.first_name }}
-                                {% endif %}
-                            </td>
-                            <td>
-                                {% if user.last_name == '' %}
-                                    فامیلی ندارد
-                                {% else %}
-                                    {{ user.last_name }}
-                                {% endif %}
-                            </td>
-                            <td>
-                                {% if user.is_superuser == True %}
-                                    کاربر ادمین
-                                {% else %}
-                                    کاربر عادی
-                                {% endif %}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
+            {% if not request.user.is_authenticated %}
+                <h3 class="slide-top-h3">همین حالا رایگان ثبت نام کنید!</h3>
+                <a href="/register">
+                    <button class="btn btn-primary btn-lg btn-font" id="s">ثبت نام در اسکوب</button>
+                </a>
             {% endif %}
-        </div>
-        <div id="section" class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="{% static "images/Untitled-1.png" %}" width="100%" alt="">
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="{% static "images/Untitled-2.png" %}" width="100%" alt="">
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img src="{% static "images/untitled-3.png" %}" width="100%" alt="">
-                        <div class="carousel-caption">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i>
-                    <i class="sr-only">Previous</i>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
-                    <i class="sr-only">Next</i>
-                </a>
-            </div>
-            <br>
-            <hr class="line-under-slide">
-            <h3>آخرین آموزش ها-------------------------------------------------------------------<a href="/courses"
-                                                                                                    class="btn btn-info"
-                                                                                                    style="font-weight: 700">مشاهده
-                ی همه ی دوره ها</a></h3>
-
-            <div class="row">
-                {% for item in last_courses %}
-                    <div class="col-sm-6 col-md-4">
-                        {% include "base/item-thumb.html" with item=item type='courses' address=item.id %}
-                    </div>
-                {% endfor %}
-            </div>
-
-
-            <hr class="line-under-slide">
-            <h3>آخرین محصولات----------------------------------------------------------------<a href="/products"
-                                                                                                class="btn btn-info"
-                                                                                                style="font-weight: 700">مشاهده
-                ی همه ی محصولات</a></h3>
-            <br>
-
-            <div class="row">
-                {% for item in last_products %}
-                    <div class="col-sm-6 col-md-4">
-                        {% include "base/item-thumb.html" with item=item type='products' address=item.slug %}
-                    </div>
-                {% endfor %}
+            <br><br><br>
+            <div class="st">
+                <ul class="icon-ul">
+                    <li class="icon-item">
+                        <ul class="item-ul">
+                            <li><i class="fas fa-stopwatch icon"></i></li>
+                            <li>
+                                <p class="edu-p">{{ number_of_courses }} آموزش</p>
+                            </li>
+                            <br><br>
+                        </ul>
+                    </li>
+                    <li class="icon-item">
+                        <ul class="item-ul">
+                            <li><i class="fas fa-user-graduate icon"></i></li>
+                            <li>
+                                <p class="edu-p">{{ number_of_users }} کاربر</p>
+                            </li>
+                            <br><br>
+                        </ul>
+                    </li>
+                    <li class="icon-item">
+                        <ul class="item-ul">
+                            <li><i class="fas fa-file-alt icon"></i></li>
+                            <li>
+                                <p class="edu-p">{{ length_ProductCategories }} دسته بندی</p>
+                            </li>
+                            <br><br>
+                        </ul>
+                    </li>
+                    <li class="icon-item">
+                        <ul class="item-ul">
+                            <li><i class="fas fa-address-card icon"></i></li>
+                            <li>
+                                <p class="edu-p">{{ length_sellers }} فروشنده معتبر</p>
+                            </li>
+                            <br><br>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-        <div id="main" class="col-12 main-main-bg">
+{% endblock %}
 
-            <hr class="line-under-slide">
-            <h3>دوره های
-                پیسنهادی
-                ---------------------------------------------------------------------------------------------<a
-                        href="/products"
-                        class="btn btn-info"
-                        style="font-weight: 700">مشاهده
-                    ی همه ی محصولات</a></h3>
-            <br>
+{% block main %}
+    <div id="section">
+        <div class="container">
+            <div class="slide-top">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
 
-            <div class="row">
-                {% for item in favorite_courses %}
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        {% include "base/item-thumb.html" with item=item type='courses' address=item.id %}
-                    </div>
-                {% endfor %}
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="{% static "images/Untitled-1.png" %}" alt="...">
+                </div>
+                <div class="item">
+                    <img src="{% static "images/Untitled-2.png" %}" alt="...">
+                </div>
+                <div class="item">
+                    <img src="{% static "images/Untitled-3.png" %}" alt="...">
+                </div>
             </div>
 
-            <hr class="line-under-slide">
-            <h3>محصولات
-                پیسنهادی
-                --------------------------------------------------------------------------------------------<a
-                        href="/products"
-                        class="btn btn-info"
-                        style="font-weight: 700">مشاهده
-                    ی همه ی محصولات</a></h3>
-            <br>
-
-            <div class="row">
-                {% for item in favorite_products %}
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                        {% include "base/item-thumb.html" with item=item type='products' address=item.slug %}
-                    </div>
-                {% endfor %}
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+            </div>
+            <div class="sec-head">
+                <ul class="top-ul">
+                    <li>
+                        <p class="top-p nd marg">آخرین دوره ها</p>
+                    </li>
+                    <li>
+                        <hr class="top-hr nd ">
+                    </li>
+                    <a href="/courses/courses-list">
+                        <li>
+                            <button class="top-button nd ">همه ی دوره های اسکوب</button>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <br><br><br>
+            <div class="sec-art">
+                <div class="row">
+                    {% for item in last_courses %}
+                        <div class="col-sm-6 col-md-4">
+                            {% include "base/item-thumb.html" with item=item type='courses' address=item.id %}
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-
-
-
+        <br>
+        <br>
+        <div class="container">
+            <div class="sec-head">
+                <ul class="top-ul">
+                    <li>
+                        <p class="top-p nd marg">آخرین محصولات</p>
+                    </li>
+                    <li>
+                        <hr class="top-hr nd ">
+                    </li>
+                    <a href="/products/products-list">
+                        <li>
+                            <button class="top-button nd ">همه ی محصولات اسکوب</button>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <br><br><br>
+            <div class="sec-art">
+                <br>
+                <div class="row">
+                    {% for item in last_products %}
+                        <div class="col-sm-6 col-md-4">
+                            {% include "base/item-thumb.html" with item=item type='products' address=item.slug %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

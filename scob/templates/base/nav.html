@@ -1,3 +1,65 @@
+{% load static %}
+
+<div id="header">
+
+    <nav class="navbars navbar-fixed-top">
+        <ul class="cont col-lg-10 col-md-10 col-sm-10 col-xs-10">
+            <li id="demo" style="color: black" ;></li>
+            <a href="/">
+                <li class="items {% if request.path == "/" %}actives{% endif %} nd">خانه</li>
+            </a>
+            <a href="/about-us">
+                <li class="items {% if request.path == "/about-us" %}actives{% endif %} nd">درباره ما</li>
+            </a>
+            <a href="/contact-us">
+                <li class="items {% if request.path == "/contact-us" %}actives{% endif %} nd">تماس ما</li>
+            </a>
+            <a href="/products/">
+                <li class="items {% if request.path == "/products/" %}actives{% endif %} nd"> محصولات
+                </li>
+            </a>
+            <a href="/courses/">
+                <li class="items {% if request.path == "/courses/" %}actives{% endif %} nd"> دوره ها</li>
+            </a>
+            <a href="/cart">
+                <li class="items {% if request.path == "/cart" %}actives{% endif %} nd">سبد خرید</li>
+            </a>
+            {#            <form style="text-align: center" class="navbar-form navbar-center" method="GET" action="/search">#}
+            {#                <div class="form-group" style="margin-top: 0.5%">#}
+            {#                    <input type="text" name="searching" class="form-control search-bar" style="width: 275px"#}
+            {#                           placeholder="جستجو کنید...">#}
+            {#                    <button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-search "></i>#}
+            {#                    </button>#}
+            {#                </div>#}
+            {##}
+            {#            </form>#}
+            <br>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-left cont col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <a style="text-align: center" href="/admin/">
+                {% else %}
+                    <a style="text-align: center" href="/account/dashboard">
+                {% endif %}
+            <li style="margin-top: 3.5%" class="nd">
+                <img style="width: 25%" src="{% static "images/user-black.png" %}" alt="">
+                <p style="color: black;text-decoration: none">ادمین</p>
+            </li>
+            </a>
+            {% else %}
+                <a style="float: left" href="/login">
+                    <li class="items nd">ورود</li>
+                </a>
+            {% endif %}
+        </ul>
+    </nav>
+    <br>
+
+</div>
+
+
 {#<div id="header" class="col-lg-12">#}
 {##}
 {#    <nav style="background-color: #1900ff;" class="navbar navbar-inverse navbar-fixed-top">#}
@@ -29,35 +91,11 @@
 {#                    {% if request.user.is_authenticated %}#}
 {#                        <li><a style="color:white;" href="/cart">سبد خرید</a></li>#}
 {#                    {% endif %}#}
-{#                    <li><a style="color:white;" href="/restaurant">رستوران</a></li>#}
-{#                    <li class="dropdown">#}
-{#                        <a style="color:white;" href="#" class="dropdown-toggle" data-toggle="dropdown"#}
-{#                           role="button"#}
-{#                           aria-haspopup="true" aria-expanded="false">آموزش ها <span class="caret"></span></a>#}
-{#                        <ul class="dropdown-menu">#}
-{#                            <li><a href="/search?searching=python">پایتون</a></li>#}
-{#                            <li><a href="/search?searching=web">وب</a></li>#}
-{#                            <li><a href="/search?searching=node">Node.js</a></li>#}
-{#                        </ul>#}
-{#                    </li>#}
-{#                </ul>#}
-{#                <ul class="nav navbar-nav navbar-right">#}
-{#                    <li class="dropdown">#}
-{#                        <a style="color:white;" href="#" class="dropdown-toggle" data-toggle="dropdown"#}
-{#                           role="button"#}
-{#                           aria-haspopup="true" aria-expanded="false">محصولات <span class="caret"></span></a>#}
-{#                        <ul class="dropdown-menu">#}
-{#                            <li><a href="/search?searching=home">لوازم خانه</a></li>#}
-{#                            <li><a href="/search?searching=digital">الکترونیکی</a></li>#}
-{#                            <li><a href="/search?searching=education">آموزشی</a></li>#}
-{#                            <li><a href="/search?searching=book">کتاب</a></li>#}
-{#                            <li><a href="/search?searching=movie">فیلم و انیمیشن</a></li>#}
-{#                            <li><a href="/search?searching=stationery">لوازم التحریر</a></li>#}
-{#                            <li><a href="/products">همه ی محصولات </a></li>#}
+{#                    <li><a style="color:white;" href="/products/">محصولات</a></li>#}
+{#                    <li><a style="color:white;" href="/courses/">دوره ها</a></li>#}
 {##}
-{#                        </ul>#}
-{#                    </li>#}
 {#                </ul>#}
+{##}
 {##}
 {#                <form class="navbar-form navbar-left" method="GET" action="/search">#}
 {#                    <div class="form-group">#}
@@ -74,56 +112,3 @@
 {#        <!-- /.container-fluid -->#}
 {#    </nav>#}
 {#</div>#}
-
-<div id="header" class="col-lg-12">
-
-    <nav style="background-color: #1900ff;" class="navbar navbar-inverse navbar-fixed-top">
-        <!--all has links!-->
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!--link-->
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">خانه <span class="sr-only">(current)</span></a></li>
-                    <li><a style="color:white;" href="/about-us">درباره ما</a></li>
-                    <li><a style="color:white;" href="/contact-us">تماس با ما</a></li>
-                    <li><a style="color:white;" href="/login">ورود</a></li>
-                    {% if request.user.is_superuser %}
-                        <li><a style="color:white;" href="/admin/">پنل ادمین</a></li>
-                    {% endif %}
-                    {% if request.user.is_authenticated %}
-                        <li><a style="color:white;" href="/cart">سبد خرید</a></li>
-                    {% endif %}
-                    <li><a style="color:white;" href="/products/">محصولات</a></li>
-                    <li><a style="color:white;" href="/courses/">دوره ها</a></li>
-
-                </ul>
-
-
-                <form class="navbar-form navbar-left" method="GET" action="/search">
-                    <div class="form-group">
-                        <input type="text" name="searching" class="form-control search-bar" style="width: 275px"
-                               placeholder="جستجو کنید...">
-                        <button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-search "></i>
-                        </button>
-                    </div>
-
-                </form>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-</div>

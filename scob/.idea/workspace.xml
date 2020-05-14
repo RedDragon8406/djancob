@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,19 +45,19 @@
     <option name="SHOW_DIALOG" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\django\scob\assets\images" />
+      <recent name="D:\django\scob\assets\js" />
+      <recent name="D:\django\scob\assets\css" />
+      <recent name="D:\django\scob\assets\images\products" />
+      <recent name="D:\django\scob\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\django\scob\assets\css" />
       <recent name="D:\django\scob" />
       <recent name="D:\django\scob\products" />
       <recent name="D:\django\scob\templates\base" />
       <recent name="D:\django\scob\masters\templates\masters" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\django\scob\assets\images" />
-      <recent name="D:\django\scob\assets\images\products" />
-      <recent name="D:\django\scob\assets\css" />
-      <recent name="D:\django\scob\templates" />
-      <recent name="D:\django\scob\assets\js" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.scob">
@@ -185,7 +185,8 @@
       <workItem from="1589274758670" duration="560000" />
       <workItem from="1589292892645" duration="5275000" />
       <workItem from="1589344161326" duration="16078000" />
-      <workItem from="1589387444718" duration="1211000" />
+      <workItem from="1589387444718" duration="1213000" />
+      <workItem from="1589439799910" duration="14503000" />
     </task>
     <servers />
   </component>
@@ -213,22 +214,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1589029075222" />
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1589390935756">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom" timestamp="1589456973309">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1589390935756" />
-    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1589390935756">
+    <state width="1326" height="227" key="GridCell.Tab.0.bottom/0.0.1368.872@0.0.1368.872" timestamp="1589456973309" />
+    <state width="1326" height="227" key="GridCell.Tab.0.center" timestamp="1589456973308">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1589390935756" />
-    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1589390935756">
+    <state width="1326" height="227" key="GridCell.Tab.0.center/0.0.1368.872@0.0.1368.872" timestamp="1589456973308" />
+    <state width="1326" height="227" key="GridCell.Tab.0.left" timestamp="1589456973308">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1589390935756" />
-    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1589390935756">
+    <state width="1326" height="227" key="GridCell.Tab.0.left/0.0.1368.872@0.0.1368.872" timestamp="1589456973308" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right" timestamp="1589456973309">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1589390935756" />
+    <state width="1326" height="227" key="GridCell.Tab.0.right/0.0.1368.872@0.0.1368.872" timestamp="1589456973309" />
     <state width="1326" height="281" key="GridCell.Tab.1.bottom" timestamp="1586802207244">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

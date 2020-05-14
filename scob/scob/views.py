@@ -6,7 +6,8 @@ from django.db.models import Q
 from courses.models import Course
 from products.models import Product
 from masters.models import Master
-
+from sellers.models import Seller
+import json
 
 def main_page(request):
     print(f"is user logged in : {request.user.is_authenticated}")
@@ -31,7 +32,12 @@ def main_page(request):
     users = User.objects.all()
     title = "اسکوب |‌صفحه ی اصلی"
 
-
+    with open("categories.json", "r") as file:
+        length_ProductCategories = json.load(file)
+    length_sellers = Seller.objects.count()
+    length_ProductCategories = len(length_ProductCategories['categories'])
+    number_of_courses = Course.objects.count()
+    number_of_users = User.objects.count()
 
     context = {
         "last_courses": lastest_c,
@@ -49,6 +55,10 @@ def main_page(request):
         "book_topic": book_topic,
         "title": title,
         "users" : users,
+        "number_of_users" : number_of_users,
+        "number_of_courses" : number_of_courses,
+        "length_ProductCategories" : length_ProductCategories,
+        "length_sellers" : length_sellers
     }
 
     return render(request, "main.html", context)

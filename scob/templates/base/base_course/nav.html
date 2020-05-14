@@ -1,46 +1,71 @@
+{% load static %}
+<style>
+    a {
+        text-decoration: none;
+        color: currentColor;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: currentColor;
+    }
+
+    .navbar-left {
+        float: left;
+    }
+</style>
+
 <div id="header">
 
     <nav class="navbars navbar-fixed-top">
-        <ul class="cont">
+        <ul class="cont col-lg-10 col-md-10 col-sm-10 col-xs-10">
             <li id="demo" style="color: black" ;></li>
-            <li class="items actives nd">خانه</li>
-            <li class="items nd">درباره ما</li>
-            <li class="items nd">تماس با ما</li>
-            <li class="items nd">محصولات</li>
-            <li class="items nd">آموزش ها</li>
-            <li class="items nd">ورود</li>
-            <li class="items nd">رستوران</li>
-            <li class="nd">
-                <form class="input-form ndd">
-                    <input class="search" placeholder="جستجو کنید">
-                    <button class="search-btn"><i class="fa fa-search"></i></button>
-                </form>
-            </li>
-            <!-- <div class="dropdown">
-                <li class="dropbtn items">جستجو <i class="fa fa-caret-down"></i></li>
-                <div class="dropdown-content">
-
+            <a href="/">
+                <li class="items {% if request.path == "/" %}actives{% endif %} nd">خانه</li>
+            </a>
+            <a href="/products/">
+                <li class="items {% if request.path == "/products/" %}actives{% endif %} nd">محصولات</li>
+            </a>
+            <a href="/courses/courses-list">
+                <li class="items {% if request.path == "/courses/courses-list" %}actives{% endif %} nd">همه ی دوره ها
+                </li>
+            </a>
+            <a href="/masters">
+                <li class="items {% if request.path == "/masters" %}actives{% endif %} nd">اساتید
+                </li>
+            </a>
+            <a href="/courses/">
+                <li class="items {% if request.path == "/courses/" %}actives{% endif %} nd"> دوره ها</li>
+            </a>
+            <form style="text-align: center" class="navbar-form navbar-center" method="GET" action="/search">
+                <div class="form-group" style="margin-top: 0.5%">
+                    <input type="text" name="searching" class="form-control search-bar" style="width: 275px"
+                           placeholder="جستجو کنید...">
+                    <button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-search "></i>
+                    </button>
                 </div>
-            </div>-->
-            <li class="fa fa-ellipsis-h lists" id="ls"></li>
-            <div class="hi">
-                <ul class="cont2">
-                    <li class="itms" id="item">خانه</li>
-                    <li class="itms" id="item">درباره ما</li>
-                    <li class="itms" id="item">تماس با ما</li>
-                    <li class="itms" id="item">محصولات</li>
-                    <li class="itms" id="item">آموزش ها</li>
-                    <li class="itms" id="item">ورود</li>
-                    <li class="itms" id="item">
-                        <form>
-                            <input class="search" placeholder="جستجو کنید">
-                            <button class="search-btn"><i class="fa fa-search"></i></button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
 
+            </form>
             <br>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-left cont col-lg-2 col-md-2 col-sm-2 col-xs-2">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                    <a style="text-align: center" href="/admin/">
+                {% else %}
+                    <a style="text-align: center" href="/account/dashboard">
+                {% endif %}
+            <li style="margin-top: 3.5%" class="nd">
+                <img style="width: 25%" src="{% static "images/user-blue.png" %}" alt="">
+                <p style="color: black;text-decoration: none">ادمین</p>
+            </li>
+            </a>
+            {% else %}
+                <a style="float: left" href="/login">
+                    <li class="items nd">ورود</li>
+                </a>
+            {% endif %}
         </ul>
     </nav>
     <br>
