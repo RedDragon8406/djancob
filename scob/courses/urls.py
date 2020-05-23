@@ -24,5 +24,5 @@ from courses.views import (
 urlpatterns = [
     path('', main_course),
     path('courses-list', courses_list_view),
-    path('<courseId>', course_detail_view),
+    path('<courseId>', course_detail_view)
 ]

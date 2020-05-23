@@ -1,11 +1,9 @@
-$(document).ready(function () {
-    $("#ls").click(function () {
+$("#ls").click(function () {
         $(".hi").slideToggle();
         $("#ls").toggleClass("fa-ellipsis-v");
         $(".itms").toggleClass("list-click");
         $(".cont2").toggleClass("list-click");
-
-    });
+});
     // $(window).scroll(function () {
     //     var width = screen.width;
     //     var scroll = $(window).scrollTop();
@@ -149,4 +147,3 @@ $(document).ready(function () {
     //     }
     // });
 
-});

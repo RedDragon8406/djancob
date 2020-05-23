@@ -1,0 +1,88 @@
+@font-face {
+  font-family: sahel;
+  src: url("https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot");
+  src: url("https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.ttf") format("truetype");
+}
+
+.navi {
+  background-color: #ff3131;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-family: sahel;
+}
+
+.navoo {
+  font-family: sahel;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.fl {
+  float: right;
+}
+
+.flr {
+  float: left;
+}
+
+.banner {
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: sahel;
+  padding: 5px;
+  border-bottom: 4px solid #ff2525;
+}
+
+.cart-header {
+  height: 41px;
+  border-bottom: 1px solid darkgray;
+}
+
+.butn {
+  font-family: sahel;
+  margin-top: 17px;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cart-section {
+  margin-top: 25px;
+}
+
+.h3-item {
+  font-family: sahel;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 1px solid darkgray;
+  border-top: 1px solid darkgray;
+}
+
+.rm-btn {
+  font-family: sahel;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=shoppingCart.min.css.map */

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block header_style %}
+    <link rel="stylesheet" href="{% static "css/panel.min.css" %}">
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+            <div id="sidebar" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="list-group">
+                    <button type="button" class="list-group-item">سبد خرید من</button>
+                    <button type="button" class="list-group-item">کیف پول</button>
+                    <button type="button" class="list-group-item">پیغام ها</button>
+                    <button type="button" class="list-group-item">اطلاعات حساب</button>
+                    <button type="button" class="list-group-item">خروج از حساب کاربری</button>
+                  </div>
+            </div>
+            <div id="section" class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="name">
+                    <img class="icon-img" src="{% static "images/user-black.png" %}">
+                    <h3 class="h3-name">نام کاربر</h3>
+                    <h4 class="h3-name"> فروشنده / کاربر عادی / مدرس </h4>
+                </div>
+                <div class="bio">
+                    <h4 class="h3-name">بیوگرافی من</h4>
+                    <textarea class="bio-texterea h3-name" placeholder="بیوگرافی من ..."></textarea>
+                    <br><br>
+                    <button class="btn btn-success h3-name">ثبت بیوگرافی</button>
+                </div>
+            </div>
+        </div>
+{% endblock %}

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from .views import main_page, login_page, register_page, logout_page, contact_page, about_page
+from .views import main_page, login_page, register_page, logout_page, contact_page, about_page, user_page
 from .views import search_page,restaurant_page
 from django.conf import settings
 from django.conf.urls.static import static
@@ -38,6 +38,7 @@ urlpatterns = [
     path('products-fbv', product_list_view,name='products-fbv_url'),
     path('masters', master_list_view,name='masters_url'),
     path('cart', cart_page,name='cart_url'),
+    path('account/dashboard', user_page,name='user_url'),
     path('sellers', seller_list_view,name='sellers_url'),
     path('sellers/<sellerId>', seller_detail_view,name='seller_url'),
     path('masters/<masterId>', master_detail_view,name='master_url'),

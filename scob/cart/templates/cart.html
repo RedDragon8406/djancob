@@ -1,17 +1,33 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block header_style %}
+    <link rel="stylesheet" href="{% static "css/shoppingCart.min.css" %}">
+{% endblock %}
+
 {% block main %}
+    <br><br>
     <div id="section">
-        <div id="cart"
-             style="margin-top: 60px;margin-left: auto;margin-right: auto;width: 80%;border: darkgrey dashed 5px;background-color: lightgray;">
-            <h3 class="text-center" style="
+        <div class="cart-header">
+            <p class="fl banner">سبد خرید شما</p>
+            <button class="flr btn btn-danger btn-lg butn">ارسال خرید ها</button>
+        </div>
+        <div class="cart-section">
+            <div class="row">
+                <div id="section">
+                    <div id="cart"
+                         style="margin-top: 60px;margin-left: auto;margin-right: auto;width: 80%;border: darkgrey dashed 5px;background-color: lightgray;">
+                        <h3 class="text-center" style="
             margin: 20%;
             text-align: center;
             font-size: 200%;
             font-style: italic;
             ">سبد خرید شما خالی است</h3>
+                    </div>
+                </div>
+                <br><br><br>
+            </div>
         </div>
     </div>
-    <br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock %}

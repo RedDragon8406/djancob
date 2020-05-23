@@ -9,6 +9,14 @@ from masters.models import Master
 from sellers.models import Seller
 import json
 
+def user_page(request):
+    title = "پنل کاربری"
+    context = {
+        "title":title
+    }
+    return render(request,'user_dash.html',context)
+
+
 def main_page(request):
     print(f"is user logged in : {request.user.is_authenticated}")
     tedad_c = Course.objects.count() - 1

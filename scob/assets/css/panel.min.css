@@ -1,0 +1,76 @@
+@font-face {
+  font-family: sahel;
+  src: url("https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot");
+  src: url("https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.eot?#iefix") format("embedded-opentype"), url("https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.woff") format("woff"), url("https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.ttf") format("truetype");
+}
+
+.navi {
+  background-color: #ff3131;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-family: sahel;
+}
+
+.navoo {
+  font-family: sahel;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.row {
+  margin-top: 100px;
+}
+
+.list-group-item {
+  width: 100%;
+  text-align: right;
+  font-family: sahel;
+}
+
+.list-group-item:hover {
+  background-color: #e9e9e9;
+  color: #00a2ff;
+}
+
+.name {
+  border: 1px solid lightgrey;
+  padding: 30px;
+}
+
+.icon-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  vertical-align: middle;
+  float: left;
+}
+
+.h3-name {
+  font-family: sahel;
+  font-weight: 500;
+  margin-top: 0px;
+}
+
+.bio {
+  border: 1px solid lightgrey;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.bio-texterea {
+  height: 200px;
+  width: 100%;
+}
+
+#section {
+  margin-bottom: 30px;
+}
+/*# sourceMappingURL=panel.min.css.map */

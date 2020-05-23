@@ -1,4 +1,3 @@
-$(document).ready(function () {
     $("#ls").click(function () {
         $(".hi").slideToggle();
         $("#ls").toggleClass("fa-ellipsis-v");
@@ -148,5 +147,3 @@ $(document).ready(function () {
             }
         }
     });
-
-});

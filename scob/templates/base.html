@@ -4,7 +4,7 @@
 
 <head>
     {% include "base/css.html" %}
-    {% block header_style %}{% endblock %}
+
 </head>
 
 <body style="font-family: Sahel;">
@@ -19,5 +19,9 @@
 </div>
 {% include "base/footer.html" %}
 </body>
-
 </html>
+{% block header_style %}{% endblock %}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="{% static "js/jquery-1.10.2.min.js" %}"></script>
+<script src="{% static "js/bootstrap-rtl.js" %}"></script>
+<script src="{% static "js/Original Main.js" %}"></script>

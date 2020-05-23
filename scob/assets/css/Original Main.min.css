@@ -35,7 +35,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   -webkit-transition: background-color 1s, color 1s;
   transition: background-color 1s, color 1s;
 }
@@ -43,7 +43,7 @@
 
 
 .navbars .actives {
-  background-color: rgba(200, 200, 200, 0.4);
+  background-color: rgba(200, 200, 200, 1);
   color: black;
 }
 
@@ -90,7 +90,7 @@
 }
 
 nav {
-  margin-top: 30px;
+  margin-top: 5px;
 }
 
 .cac {
